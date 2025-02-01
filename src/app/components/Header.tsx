@@ -1,5 +1,6 @@
 // src/app/components/Header.ts
 "use client"; 
+import Link from "next/link";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
@@ -16,13 +17,12 @@ export default function Header() {
             </div>
 
             <nav className="hidden lg:flex space-x-6">
-                <a href="/" className="hover:text-white">Home</a>
-                <a href="/about" className="hover:text-white">About Us</a>
-                <a href="/product" className="hover:text-white">Product</a>
-                <a href="/applications" className="hover:text-white">Applications</a>
-                <a href="/environment" className="hover:text-white">Environmental Impact</a>
-                <a href="/case-studies" className="hover:text-white">Case Studies</a>
-                <a href="/contact" className="hover:text-white">Contact Us</a>
+                <Link href="/" className="hover:text-white">Home</Link>
+                <Link href="/about-us" className="hover:text-white">About Us</Link>
+                <Link href="/applications" className="hover:text-white">Applications</Link>
+                <Link href="/environment" className="hover:text-white">Environmental Impact</Link>
+                <Link href="/case-studies" className="hover:text-white">Case Studies</Link>
+                <Link href="/contact" className="hover:text-white">Contact Us</Link>
             </nav>
 
             {/* دکمه‌های سمت راست (زبان و CTA) */}
@@ -50,15 +50,14 @@ export default function Header() {
 
             {/* منوی موبایل */}
             {isMenuOpen && (
-            <div className="lg:hidden absolute top-16 right-0 bg-zinc-200 w-full p-4">
+            <div className="lg:hidden absolute top-16 right-0 bg-zinc-200 w-full p-4 ">
                 <nav className="flex flex-col space-y-4">
-                <a href="/" className="hover:text-white">Home</a>
-                <a href="/about" className="hover:text-white">About Us</a>
-                <a href="/product" className="hover:text-white">Product</a>
-                <a href="/applications" className="hover:text-white">Applications</a>
-                <a href="/environment" className="hover:text-white">Environmental Impact</a>
-                <a href="/case-studies" className="hover:text-white">Case Studies</a>
-                <a href="/contact" className="hover:text-white">Contact Us</a>
+                <Link href="/" className="hover:text-white">Home</Link>
+                <Link href="/about-us" className="hover:text-white">About Us</Link>
+                <Link href="/applications" className="hover:text-white">Applications</Link>
+                <Link href="/environment" className="hover:text-white">Environmental Impact</Link>
+                <Link href="/case-studies" className="hover:text-white">Case Studies</Link>
+                <Link href="/contact" className="hover:text-white">Contact Us</Link>
                 </nav>
                 <div className="mt-4">
                 <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full">Request a Quote</button>
