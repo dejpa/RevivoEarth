@@ -1,10 +1,58 @@
 // src/app/components/Footer.tsx
+import { FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6'; 
+
 export default function Footer() {
     return (
-      <footer className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2025 My Website. All rights reserved.</p>
-        </div>
-      </footer>
+        <footer className="bg-zinc-200 text-green-950 p-8">
+            <div className="container mx-auto flex justify-between">
+                <div>
+                    <h3 className="text-lg font-bold">Contact Us</h3>
+                    <p>Address: 123 Green St, Eco City</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Email: info@biomulch.com</p>
+                </div>
+                <div>
+                <h3 className="text-lg font-bold">Quick Links</h3>
+                    <ul>
+                        <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" className="hover:text-white">Terms of Service</a></li>
+                        <li><a href="/about" className="hover:text-white">About Us</a></li>
+                        <li><a href="/contact" className="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 className="text-lg font-bold">Follow Us</h3>
+                    <div className="flex space-x-4">
+                        <a
+                        href="https://www.instagram.com/yourcompany"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white"
+                        >
+                            <FaInstagram className="h-6 w-6" />
+                        </a>
+                        <a
+                        href="https://www.linkedin.com/company/yourcompany"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white"
+                        >
+                        <FaLinkedin className="h-6 w-6" />
+                        </a>
+                        <a
+                        href="https://twitter.com/yourcompany"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white"
+                        >
+                        <FaXTwitter className="h-6 w-6" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div className="text-center mt-8">
+                <p>© 2025 BioMulch. All rights reserved.</p>
+            </div>
+        </footer>
     );
   }

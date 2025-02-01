@@ -1,15 +1,77 @@
-// src/app/components/Header.tsx
+// src/app/components/Header.ts
+"use client"; 
+import { useState } from "react";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+
 export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+      };
     return (
-      <header className="fixed top-0 left-0 right-0 bg-gray-800 text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">My Website</h1>
-          <div className="flex space-x-4">
-            <button className="text-white">English</button>
-            <button className="text-white">فارسی</button>
-            <button className="text-white">العربية</button>
-          </div>
-        </div>
-      </header>
+        <header className="bg-zinc-200 text-green-950 p-4 flex justify-between items-center drop-shadow-md">
+            {/* لوگو */}
+            <div className="flex items-center">
+            <img src="/logo.jpg" alt="Company Logo" className="h-12" />
+            </div>
+
+            <nav className="hidden lg:flex space-x-6">
+                <a href="/" className="hover:text-white">Home</a>
+                <a href="/about" className="hover:text-white">About Us</a>
+                <a href="/product" className="hover:text-white">Product</a>
+                <a href="/applications" className="hover:text-white">Applications</a>
+                <a href="/environment" className="hover:text-white">Environmental Impact</a>
+                <a href="/case-studies" className="hover:text-white">Case Studies</a>
+                <a href="/contact" className="hover:text-white">Contact Us</a>
+            </nav>
+
+            {/* دکمه‌های سمت راست (زبان و CTA) */}
+            <div className="hidden lg:flex items-center">
+                <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950">Request a Quote</button>
+                <div className="ml-4">
+                    <select className="bg-zinc-100 text-green-950 border-none">
+                    <option value="en">English</option>
+                    <option value="fa">فارسی</option>
+                    <option value="ar">العربية</option>
+                    </select>
+                </div>
+            </div>
+
+            {/* آیکون همبرگر برای موبایل */}
+            <div className="lg:hidden">
+                <button onClick={toggleMenu} className="text-white focus:outline-none">
+                    {isMenuOpen ? (
+                    <XMarkIcon className="h-6 w-6 text-green-950" />
+                    ) : (
+                    <Bars3Icon className="h-6 w-6 text-green-950" />   
+                    )}
+                </button>
+            </div>
+
+            {/* منوی موبایل */}
+            {isMenuOpen && (
+            <div className="lg:hidden absolute top-16 right-0 bg-zinc-200 w-full p-4">
+                <nav className="flex flex-col space-y-4">
+                <a href="/" className="hover:text-white">Home</a>
+                <a href="/about" className="hover:text-white">About Us</a>
+                <a href="/product" className="hover:text-white">Product</a>
+                <a href="/applications" className="hover:text-white">Applications</a>
+                <a href="/environment" className="hover:text-white">Environmental Impact</a>
+                <a href="/case-studies" className="hover:text-white">Case Studies</a>
+                <a href="/contact" className="hover:text-white">Contact Us</a>
+                </nav>
+                <div className="mt-4">
+                <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full">Request a Quote</button>
+                </div>
+                <div className="mt-4">
+                <select className="bg-green-950 text-white border-none w-full">
+                    <option value="en">English</option>
+                    <option value="fa">فارسی</option>
+                    <option value="ar">العربية</option>
+                </select>
+                </div>
+            </div>
+            )}
+        </header>
     );
-  }
+}
