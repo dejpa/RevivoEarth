@@ -13,7 +13,7 @@ export default function Header() {
         <header className="w-full bg-zinc-200 text-green-950 p-4 flex justify-between items-center drop-shadow-md fixed z-50 blur-xs">
             {/* <div className="absolute inset-0 bg-black/50"></div> */}
             <div className="flex items-center">
-                <img src="/logo.jpg" alt="Company Logo" className="h-12" />
+                <Link href="/" ><img src="/logo.jpg" alt="Company Logo" className="h-12" /></Link>
             </div>
 
             <nav className="hidden lg:flex space-x-6">
