@@ -10,10 +10,10 @@ export default function Header() {
         setIsMenuOpen(!isMenuOpen);
       };
     return (
-        <header className="bg-zinc-200 text-green-950 p-4 flex justify-between items-center drop-shadow-md">
-            {/* لوگو */}
+        <header className="w-full bg-zinc-200 text-green-950 p-4 flex justify-between items-center drop-shadow-md fixed z-50 blur-xs">
+            {/* <div className="absolute inset-0 bg-black/50"></div> */}
             <div className="flex items-center">
-            <img src="/logo.jpg" alt="Company Logo" className="h-12" />
+                <img src="/logo.jpg" alt="Company Logo" className="h-12" />
             </div>
 
             <nav className="hidden lg:flex space-x-6">
@@ -50,7 +50,7 @@ export default function Header() {
 
             {/* منوی موبایل */}
             {isMenuOpen && (
-            <div className="lg:hidden fixed  top-16 right-0 bg-zinc-200 w-full p-4 z-50">
+            <div className="lg:hidden fixed top-16 right-0 bg-zinc-200 w-full p-4 ">
                 <nav className="flex flex-col space-y-4  ">
                     <Link href="/" className="hover:text-white">Home</Link>
                     <Link href="/about-us" className="hover:text-white">About Us</Link>
@@ -63,7 +63,7 @@ export default function Header() {
                 <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full">Request a Quote</button>
                 </div>
                 <div className="mt-4">
-                <select className="bg-green-950 text-white border-none w-full">
+                <select className="bg-green-700 text-white border-none p-2 rounded">
                     <option value="en">English</option>
                     <option value="fa">فارسی</option>
                     <option value="ar">العربية</option>

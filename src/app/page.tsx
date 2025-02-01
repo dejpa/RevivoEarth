@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* hero section */}
       <section className="relative min-h-screen flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/cover.jpeg')" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/cover.jpeg')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto text-center relative z-10">
@@ -42,7 +42,7 @@ export default function Home() {
       {/*section: Problem Explanation and Need Creation  */}
       <section className="relative py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">
+          <h2 className="text-4xl font-bold mb-8 text-green-600">
             Traditional Mulch Solutions Are Not Enough!
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* مشکل ۱: کاهش حاصلخیزی خاک */}
             <div className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Reduced Soil Fertility</h3>
+              <h3 className="text-xl font-semibold text-gray-300 mb-2">Reduced Soil Fertility</h3>
               <p className="text-gray-600">
                 Wind erosion strips away the fertile topsoil, making it difficult for plants to grow.
               </p>
@@ -59,7 +59,7 @@ export default function Home() {
 
             {/* مشکل ۲: افزایش گرد و غبار */}
             <div className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Increased Dust Storms</h3>
+              <h3 className="text-xl font-semibold text-gray-300 mb-2">Increased Dust Storms</h3>
               <p className="text-gray-600">
                 Dust particles can travel thousands of kilometers, affecting air quality and human health.
               </p>
@@ -67,7 +67,7 @@ export default function Home() {
 
             {/* مشکل ۳: خسارات اقتصادی */}
             <div className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Economic Losses</h3>
+              <h3 className="text-xl font-semibold text-gray-300 mb-2">Economic Losses</h3>
               <p className="text-gray-600">
                 Dust storms cause flight cancellations, reduce agricultural productivity, and damage infrastructure.
               </p>
@@ -79,7 +79,7 @@ export default function Home() {
       {/*section: solution Proposal */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">
+          <h2 className="text-4xl font-bold mb-8 text-green-600">
             A Game-Changer for Soil Protection
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -88,8 +88,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* مزیت ۱: Sustainability */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <FaLeaf className="text-green-500 h-12 w-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Sustainability</h3>
+              <FaLeaf className="text-green-600 h-12 w-12 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-gray-300">Sustainability</h3>
               <p className="text-gray-600">
                 Eco-friendly and harmless to plants, our product supports a greener future.
               </p>
@@ -97,8 +97,8 @@ export default function Home() {
 
             {/* مزیت ۲: Resilience */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <FaShieldAlt className="text-green-500 h-12 w-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Resilience</h3>
+              <FaShieldAlt className="text-green-600 h-12 w-12 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-gray-300">Resilience</h3>
               <p className="text-gray-600">
                 Provides strong protection against soil erosion and harsh weather conditions.
               </p>
@@ -106,8 +106,8 @@ export default function Home() {
 
             {/* مزیت ۳: Creativity */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <FaCheckCircle className="text-green-500 h-12 w-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Creativity</h3>
+              <FaCheckCircle className="text-green-600 h-12 w-12 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-gray-300">Creativity</h3>
               <p className="text-gray-600">
                 An innovative blend inspired by nature, designed for modern challenges.
               </p>
@@ -119,7 +119,7 @@ export default function Home() {
       {/* Proof and Trust-Building  */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">
+          <h2 className="text-4xl font-bold mb-8 text-green-600">
             Trusted by Experts, Loved by Nature
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -130,13 +130,13 @@ export default function Home() {
               <blockquote className="text-gray-600 italic">
                 "Bio-Oil Mulch has revolutionized soil stabilization. It's effective, eco-friendly, and easy to apply."
               </blockquote>
-              <p className="mt-4 font-semibold">- Dr. Ali Reza, Environmental Scientist</p>
+              <p className="mt-4 font-semibold text-green-600">- Dr. Ali Reza, Environmental Scientist</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md">
               <blockquote className="text-gray-600 italic">
                 "We've seen a significant reduction in dust storms since using Bio-Oil Mulch. Highly recommended!"
               </blockquote>
-              <p className="mt-4 font-semibold">- Farm Owner, Yazd Province</p>
+              <p className="mt-4 font-semibold text-green-600">- Farm Owner, Yazd Province</p>
             </div>
           </div>
           {/* link to dejpa */}
@@ -145,7 +145,7 @@ export default function Home() {
               href="https://dejpa.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-500 hover:text-green-600 underline"
+              className="text-green-950 hover:text-green-600 underline"
             >
               Learn more about our commitment to sustainability at Dejpa.
             </a>
