@@ -52,15 +52,15 @@ export default function Header() {
             {isMenuOpen && (
             <div className="lg:hidden fixed top-16 right-0 bg-zinc-200 w-full p-4 ">
                 <nav className="flex flex-col space-y-4  ">
-                    <Link href="/" className="hover:text-white">Home</Link>
-                    <Link href="/about-us" className="hover:text-white">About Us</Link>
-                    <Link href="/applications" className="hover:text-white">Applications</Link>
-                    <Link href="/environmental-impact" className="hover:text-white">Environmental Impact</Link>
-                    <Link href="/case-studies" className="hover:text-white">Case Studies</Link>
-                    <Link href="/contact" className="hover:text-white">Contact Us</Link>
+                    <Link onClick={toggleMenu} href="/" className="hover:text-white">Home</Link>
+                    <Link onClick={toggleMenu} href="/about-us" className="hover:text-white">About Us</Link>
+                    <Link onClick={toggleMenu} href="/applications" className="hover:text-white">Applications</Link>
+                    <Link onClick={toggleMenu} href="/environmental-impact" className="hover:text-white">Environmental Impact</Link>
+                    <Link onClick={toggleMenu} href="/case-studies" className="hover:text-white">Case Studies</Link>
+                    <Link onClick={toggleMenu} href="/contact" className="hover:text-white">Contact Us</Link>
                 </nav>
                 <div className="mt-4">
-                <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full">Request a Quote</button>
+                <button onClick={toggleMenu} className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full">Request a Quote</button>
                 </div>
                 <div className="mt-4">
                 <select className="bg-green-700 text-white border-none p-2 rounded">

@@ -24,7 +24,7 @@ export default function EnvironmentalImpact() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FaWind className="text-green-600 h-8 w-8 mr-4" />
-              <h2 className="text-3xl font-bold">Reducing Wind Erosion and Controlling Dust Storms</h2>
+              <h2 className="text-gray-600 text-3xl font-bold">Reducing Wind Erosion and Controlling Dust Storms</h2>
             </div>
             <p className="text-gray-600 mb-4">
               Oil mulch stabilizes the soil surface, preventing the movement of fine particles that contribute to dust storms.
@@ -38,7 +38,7 @@ export default function EnvironmentalImpact() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FaLeaf className="text-green-600 h-8 w-8 mr-4" />
-              <h2 className="text-3xl font-bold">Preserving Biodiversity</h2>
+              <h2 className="text-gray-600 text-3xl font-bold">Preserving Biodiversity</h2>
             </div>
             <p className="text-gray-600 mb-4">
               By preventing soil erosion, natural habitats remain intact, protecting biodiversity.
@@ -52,7 +52,7 @@ export default function EnvironmentalImpact() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FaSun className="text-green-600 h-8 w-8 mr-4" />
-              <h2 className="text-3xl font-bold">Enhancing Agricultural Productivity and Combating Climate Change</h2>
+              <h2 className="text-gray-600 text-3xl font-bold">Enhancing Agricultural Productivity and Combating Climate Change</h2>
             </div>
             <p className="text-gray-600 mb-4">
               Applying oil mulch to degraded lands and agricultural fields helps retain soil moisture.
@@ -66,7 +66,7 @@ export default function EnvironmentalImpact() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FaTint className="text-green-600 h-8 w-8 mr-4" />
-              <h2 className="text-3xl font-bold">Reducing Water Consumption in Arid Regions</h2>
+              <h2 className="text-gray-600 text-3xl font-bold">Reducing Water Consumption in Arid Regions</h2>
             </div>
             <p className="text-gray-600 mb-4">
               One of the biggest challenges in dry areas is rapid water evaporation from the soil surface.
@@ -80,7 +80,7 @@ export default function EnvironmentalImpact() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FaCity className="text-green-600 h-8 w-8 mr-4" />
-              <h2 className="text-3xl font-bold">Improving Urban Living Conditions and Lowering Economic Costs</h2>
+              <h2 className="text-gray-600 text-3xl font-bold">Improving Urban Living Conditions and Lowering Economic Costs</h2>
             </div>
             <p className="text-gray-600 mb-4">
               By reducing dust pollution, oil mulch helps improve air quality, leading to fewer respiratory problems and associated health costs.
@@ -94,7 +94,7 @@ export default function EnvironmentalImpact() {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <FaRecycle className="text-green-600 h-8 w-8 mr-4" />
-              <h2 className="text-3xl font-bold">A Sustainable Alternative to Traditional Soil Stabilization Methods</h2>
+              <h2 className="text-gray-600 text-3xl font-bold">A Sustainable Alternative to Traditional Soil Stabilization Methods</h2>
             </div>
             <p className="text-gray-600 mb-4">
               Compared to conventional methods like planting vegetation or building soil barriers, oil mulch provides a faster and more efficient solution for soil stabilization.
