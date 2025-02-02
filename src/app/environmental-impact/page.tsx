@@ -5,11 +5,11 @@ export default function EnvironmentalImpact() {
   return (
     <div className="bg-white text-gray-800">
       {/* hero section  */}
-      <section className="relative py-20 bg-green-800 text-white">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/environmental-impact.jpeg')" }}>
+      <section className="relative min-h-screen flex items-center justify-center text-white">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/environmental-impact.webp')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center z-10">
           <h1 className="text-5xl font-bold mb-4">Environmental Impact of Oil Mulch</h1>
           <p className="text-xl">
             Discover how oil mulch contributes to a sustainable future by protecting soil, reducing dust, and improving air quality.

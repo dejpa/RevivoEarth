@@ -18,7 +18,7 @@ export default function Home() {
 
       {/* hero section */}
       <section className="relative min-h-screen flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/cover.jpeg')" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/cover.webp')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto text-center relative z-10">
