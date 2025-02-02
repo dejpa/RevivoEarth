@@ -29,7 +29,7 @@ export default function CaseStudies() {
               href="https://www.ams.usda.gov/sites/default/files/media/CSBiodegradBiobasedFinalRec.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               Read the full report
             </a>
@@ -45,7 +45,7 @@ export default function CaseStudies() {
               href="https://phys.org/news/2022-09-biodegradable-plastic-mulch-climate-smart-agricultural.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               Read more
             </a>
@@ -61,7 +61,7 @@ export default function CaseStudies() {
               href="https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1283&context=agronhortdiss"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               View the study
             </a>
@@ -77,7 +77,7 @@ export default function CaseStudies() {
               href="https://www.mdpi.com/2313-4321/9/5/96"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               Read the full article
             </a>
@@ -93,7 +93,7 @@ export default function CaseStudies() {
               href="https://journals.ashs.org/horttech/view/journals/horttech/26/2/article-p148.xml"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               View the study
             </a>
@@ -109,7 +109,7 @@ export default function CaseStudies() {
               href="https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2024.1423136/full"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               Read the full article
             </a>
@@ -125,7 +125,7 @@ export default function CaseStudies() {
               href="https://www.researchgate.net/publication/360456429_Effects_of_different_mulches_on_soil_and_plants_in_the_desert_of_Iran"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               View the study
             </a>
@@ -141,7 +141,7 @@ export default function CaseStudies() {
               href="https://www.researchgate.net/publication/257368991_Evaluation_of_desert_management_and_rehabilitation_by_petroleum_mulch_base_on_temporal_spectral_analysis_and_field_study_case_study_Ahvaz_Iran"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-950 underline"
+              className="text-green-700 hover:text-green-950 underline"
             >
               View the study
             </a>

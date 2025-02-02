@@ -43,7 +43,7 @@ export default function Home() {
       {/*section: Problem Explanation and Need Creation  */}
       <section className="relative py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-700">
             Traditional Mulch Solutions Are Not Enough!
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -80,7 +80,7 @@ export default function Home() {
       {/*section: solution Proposal */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-700">
             A Game-Changer for Soil Protection
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* مزیت ۱: Sustainability */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <FaLeaf className="text-green-600 h-12 w-12 mx-auto mb-4" />
+              <FaLeaf className="text-green-700 h-12 w-12 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-300">Sustainability</h3>
               <p className="text-gray-600">
                 Eco-friendly and harmless to plants, our product supports a greener future.
@@ -98,7 +98,7 @@ export default function Home() {
 
             {/* مزیت ۲: Resilience */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <FaShieldAlt className="text-green-600 h-12 w-12 mx-auto mb-4" />
+              <FaShieldAlt className="text-green-700 h-12 w-12 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-300">Resilience</h3>
               <p className="text-gray-600">
                 Provides strong protection against soil erosion and harsh weather conditions.
@@ -107,7 +107,7 @@ export default function Home() {
 
             {/* مزیت ۳: Creativity */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <FaCheckCircle className="text-green-600 h-12 w-12 mx-auto mb-4" />
+              <FaCheckCircle className="text-green-700 h-12 w-12 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-300">Creativity</h3>
               <p className="text-gray-600">
                 An innovative blend inspired by nature, designed for modern challenges.
@@ -120,7 +120,7 @@ export default function Home() {
       {/* Proof and Trust-Building  */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-700">
             Trusted by Experts, Loved by Nature
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -131,13 +131,13 @@ export default function Home() {
               <blockquote className="text-gray-600 italic">
                 "Bio-Oil Mulch has revolutionized soil stabilization. It's effective, eco-friendly, and easy to apply."
               </blockquote>
-              <p className="mt-4 font-semibold text-green-600">- Dr. Ali Reza, Environmental Scientist</p>
+              <p className="mt-4 font-semibold text-green-700">- Dr. Ali Reza, Environmental Scientist</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md">
               <blockquote className="text-gray-600 italic">
                 "We've seen a significant reduction in dust storms since using Bio-Oil Mulch. Highly recommended!"
               </blockquote>
-              <p className="mt-4 font-semibold text-green-600">- Farm Owner, Yazd Province</p>
+              <p className="mt-4 font-semibold text-green-700">- Farm Owner, Yazd Province</p>
             </div>
           </div>
           {/* link to dejpa */}
@@ -146,7 +146,7 @@ export default function Home() {
               href="https://dejpa.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-950 hover:text-green-600 underline"
+              className="text-green-950 hover:text-green-700 underline"
             >
               Learn more about our commitment to sustainability at Dejpa.
             </a>
