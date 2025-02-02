@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function AboutUs() {
   return (
     <div className="bg-white text-gray-800">
-      {/* هیرو بخش */}
+      {/* hero section  */}
       <section className="relative min-h-screen flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/about-us.jpeg')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
