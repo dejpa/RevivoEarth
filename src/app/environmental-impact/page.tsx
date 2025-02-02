@@ -1,3 +1,5 @@
+// src/app/environmental-impact/EnvironmentalImpact.ts
+
 import Link from "next/link";
 import { FaWind, FaLeaf, FaTint, FaSun, FaCity, FaRecycle } from "react-icons/fa";
 
@@ -23,7 +25,7 @@ export default function EnvironmentalImpact() {
           {/* بخش ۱: کاهش فرسایش بادی و کنترل طوفان‌های گرد و غبار */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <FaWind className="text-green-600 h-8 w-8 mr-4" />
+              <FaWind className="text-green-700 h-8 w-8 mr-4" />
               <h2 className="text-gray-600 text-3xl font-bold">Reducing Wind Erosion and Controlling Dust Storms</h2>
             </div>
             <p className="text-gray-600 mb-4">
@@ -37,7 +39,7 @@ export default function EnvironmentalImpact() {
           {/* بخش ۲: حفظ تنوع زیستی */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <FaLeaf className="text-green-600 h-8 w-8 mr-4" />
+              <FaLeaf className="text-green-700 h-8 w-8 mr-4" />
               <h2 className="text-gray-600 text-3xl font-bold">Preserving Biodiversity</h2>
             </div>
             <p className="text-gray-600 mb-4">
@@ -51,7 +53,7 @@ export default function EnvironmentalImpact() {
           {/* بخش ۳: افزایش بهره‌وری کشاورزی و مبارزه با تغییرات اقلیمی */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <FaSun className="text-green-600 h-8 w-8 mr-4" />
+              <FaSun className="text-green-700 h-8 w-8 mr-4" />
               <h2 className="text-gray-600 text-3xl font-bold">Enhancing Agricultural Productivity and Combating Climate Change</h2>
             </div>
             <p className="text-gray-600 mb-4">
@@ -65,7 +67,7 @@ export default function EnvironmentalImpact() {
           {/* بخش ۴: کاهش مصرف آب در مناطق خشک */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <FaTint className="text-green-600 h-8 w-8 mr-4" />
+              <FaTint className="text-green-700 h-8 w-8 mr-4" />
               <h2 className="text-gray-600 text-3xl font-bold">Reducing Water Consumption in Arid Regions</h2>
             </div>
             <p className="text-gray-600 mb-4">
@@ -79,7 +81,7 @@ export default function EnvironmentalImpact() {
           {/* بخش ۵: بهبود شرایط زندگی شهری و کاهش هزینه‌های اقتصادی */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <FaCity className="text-green-600 h-8 w-8 mr-4" />
+              <FaCity className="text-green-700 h-8 w-8 mr-4" />
               <h2 className="text-gray-600 text-3xl font-bold">Improving Urban Living Conditions and Lowering Economic Costs</h2>
             </div>
             <p className="text-gray-600 mb-4">
@@ -93,7 +95,7 @@ export default function EnvironmentalImpact() {
           {/* بخش ۶: یک جایگزین پایدار برای روش‌های سنتی تثبیت خاک */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <FaRecycle className="text-green-600 h-8 w-8 mr-4" />
+              <FaRecycle className="text-green-700 h-8 w-8 mr-4" />
               <h2 className="text-gray-600 text-3xl font-bold">A Sustainable Alternative to Traditional Soil Stabilization Methods</h2>
             </div>
             <p className="text-gray-600 mb-4">

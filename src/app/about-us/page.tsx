@@ -1,3 +1,5 @@
+// src/app/about-us/AboutUs.ts
+
 import Link from "next/link";
 
 export default function AboutUs() {

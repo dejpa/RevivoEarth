@@ -1,3 +1,5 @@
+// src/app/case-studies/CaseStudies.ts
+
 import Link from "next/link";
 
 export default function CaseStudies() {
