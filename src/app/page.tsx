@@ -42,7 +42,7 @@ export default function Home() {
       {/*section: Problem Explanation and Need Creation  */}
       <section className="relative py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8 text-green-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">
             Traditional Mulch Solutions Are Not Enough!
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -79,7 +79,7 @@ export default function Home() {
       {/*section: solution Proposal */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8 text-green-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">
             A Game-Changer for Soil Protection
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ export default function Home() {
       {/* Proof and Trust-Building  */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8 text-green-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">
             Trusted by Experts, Loved by Nature
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -156,7 +156,7 @@ export default function Home() {
       {/* Call to Action */}
       <section className="py-16 bg-green-950 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">
             Ready to Make a Change?
           </h2>
           <p className="text-xl mb-8">

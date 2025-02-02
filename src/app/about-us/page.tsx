@@ -19,7 +19,7 @@ export default function AboutUs() {
       {/* معرفی شرکت */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-green-600">Who We Are</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">Who We Are</h2>
           <p className="text-gray-600 mb-8">
             At Bio-Oil Mulch, we are dedicated to providing innovative and eco-friendly solutions for soil protection and dust control. Our mission is to revolutionize the way industries, agriculture, and construction sites manage soil erosion and dust problems.
           </p>
@@ -32,7 +32,7 @@ export default function AboutUs() {
       {/* تاریخچه شرکت */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-green-600">Our History</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">Our History</h2>
           <p className="text-gray-600 mb-8">
             Founded in [Year], Bio-Oil Mulch started as a small team of environmental enthusiasts with a vision to create sustainable solutions for soil protection. Over the years, we have grown into a leading provider of eco-friendly mulch products, serving clients across various industries.
           </p>
@@ -45,7 +45,7 @@ export default function AboutUs() {
       {/* ماموریت و ارزش‌ها */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-green-600">Our Mission & Values</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">Our Mission & Values</h2>
           <p className="text-gray-600 mb-8">
             Our mission is to provide sustainable and effective solutions for soil protection, helping industries and communities combat soil erosion and dust problems. We are guided by the following core values:
           </p>
@@ -61,7 +61,7 @@ export default function AboutUs() {
       {/* محصولات و خدمات */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-green-600">Our Product: Bio-Oil Mulch</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">Our Product: Bio-Oil Mulch</h2>
           <p className="text-gray-600 mb-8">
             Bio-Oil Mulch is a revolutionary product designed to protect soil, control dust, and promote sustainable land management. Here are some of its key benefits:
           </p>
@@ -77,7 +77,7 @@ export default function AboutUs() {
       {/* تیم ما */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-green-600">Our Team</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-600">Our Team</h2>
           <p className="text-gray-600 mb-8">
             Our team is composed of passionate professionals with expertise in environmental science, engineering, and business. Together, we are committed to delivering innovative solutions that make a difference.
           </p>
@@ -109,7 +109,7 @@ export default function AboutUs() {
       {/* Call to Action */}
       <section className="py-16 bg-green-950 text-white text-center">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Ready to Make a Change?</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">Ready to Make a Change?</h2>
           <p className="text-xl mb-8">
             Join us in our mission to create a sustainable future. Contact us today to learn more about our products and services.
           </p>

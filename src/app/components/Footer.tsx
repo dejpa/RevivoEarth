@@ -6,13 +6,13 @@ export default function Footer() {
         <footer className="bg-zinc-200 text-green-950 p-8">
             <div className="container mx-auto flex justify-between">
                 <div>
-                    <h3 className="text-lg font-bold">Contact Us</h3>
+                    <h3 className="text-md md:text-lg font-bold">Contact Us</h3>
                     <p>Address: 123 Green St, Eco City</p>
                     <p>Phone: +123 456 7890</p>
                     <p>Email: info@biomulch.com</p>
                 </div>
                 <div>
-                <h3 className="text-lg font-bold">Quick Links</h3>
+                <h3 className="text-md md:text-lg font-bold">Quick Links</h3>
                     <ul>
                         <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
                         <li><a href="/terms" className="hover:text-white">Terms of Service</a></li>
@@ -21,7 +21,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <h3 className="text-lg font-bold">Follow Us</h3>
+                    <h3 className="text-md md:text-lg font-bold">Follow Us</h3>
                     <div className="flex space-x-4">
                         <a
                         href="https://www.instagram.com/yourcompany"
