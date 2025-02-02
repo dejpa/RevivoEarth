@@ -20,7 +20,7 @@ export default function Header() {
                 <Link href="/" className="hover:text-white">Home</Link>
                 <Link href="/about-us" className="hover:text-white">About Us</Link>
                 <Link href="/applications" className="hover:text-white">Applications</Link>
-                <Link href="/environment" className="hover:text-white">Environmental Impact</Link>
+                <Link href="/environmental-impact" className="hover:text-white">Environmental Impact</Link>
                 <Link href="/case-studies" className="hover:text-white">Case Studies</Link>
                 <Link href="/contact" className="hover:text-white">Contact Us</Link>
             </nav>
@@ -55,7 +55,7 @@ export default function Header() {
                     <Link href="/" className="hover:text-white">Home</Link>
                     <Link href="/about-us" className="hover:text-white">About Us</Link>
                     <Link href="/applications" className="hover:text-white">Applications</Link>
-                    <Link href="/environment" className="hover:text-white">Environmental Impact</Link>
+                    <Link href="/environmental-impact" className="hover:text-white">Environmental Impact</Link>
                     <Link href="/case-studies" className="hover:text-white">Case Studies</Link>
                     <Link href="/contact" className="hover:text-white">Contact Us</Link>
                 </nav>

@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { FaLeaf , FaCheckCircle, FaShieldAlt} from "react-icons/fa";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -29,9 +30,9 @@ export default function Home() {
             embodies creativity in environmental solutions.
           </p>
           <div className="space-x-4">
-            <a href="/product" className="bg-zinc-200 text-green-950 px-6 py-3 rounded-lg hover:bg-lime-600 hover:text-white transition duration-300">
+            <Link href="/about-us" className="bg-zinc-200 text-green-950 px-6 py-3 rounded-lg hover:bg-lime-600 hover:text-white transition duration-300">
               Learn More
-            </a>
+            </Link>
             <a href="/contact" className="bg-transparent border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-950 transition duration-300">
               Get a Quote
             </a>
