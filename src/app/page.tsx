@@ -52,7 +52,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* مشکل ۱: کاهش حاصلخیزی خاک */}
             <div className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-300 mb-2">Reduced Soil Fertility</h3>
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">Reduced Soil Fertility</h3>
               <p className="text-gray-600">
                 Wind erosion strips away the fertile topsoil, making it difficult for plants to grow.
               </p>
@@ -60,7 +60,7 @@ export default function Home() {
 
             {/* مشکل ۲: افزایش گرد و غبار */}
             <div className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-300 mb-2">Increased Dust Storms</h3>
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">Increased Dust Storms</h3>
               <p className="text-gray-600">
                 Dust particles can travel thousands of kilometers, affecting air quality and human health.
               </p>
@@ -68,7 +68,7 @@ export default function Home() {
 
             {/* مشکل ۳: خسارات اقتصادی */}
             <div className="p-6 bg-white rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-300 mb-2">Economic Losses</h3>
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">Economic Losses</h3>
               <p className="text-gray-600">
                 Dust storms cause flight cancellations, reduce agricultural productivity, and damage infrastructure.
               </p>
@@ -90,7 +90,7 @@ export default function Home() {
             {/* مزیت ۱: Sustainability */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
               <FaLeaf className="text-green-700 h-12 w-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-gray-300">Sustainability</h3>
+              <h3 className=" text-xl font-semibold mb-2 text-gray-600">Sustainability</h3>
               <p className="text-gray-600">
                 Eco-friendly and harmless to plants, our product supports a greener future.
               </p>
@@ -99,7 +99,7 @@ export default function Home() {
             {/* مزیت ۲: Resilience */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
               <FaShieldAlt className="text-green-700 h-12 w-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-gray-300">Resilience</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-600">Resilience</h3>
               <p className="text-gray-600">
                 Provides strong protection against soil erosion and harsh weather conditions.
               </p>
@@ -108,7 +108,7 @@ export default function Home() {
             {/* مزیت ۳: Creativity */}
             <div className="p-6 bg-gray-50 rounded-lg shadow-md">
               <FaCheckCircle className="text-green-700 h-12 w-12 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-gray-300">Creativity</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-600">Creativity</h3>
               <p className="text-gray-600">
                 An innovative blend inspired by nature, designed for modern challenges.
               </p>
