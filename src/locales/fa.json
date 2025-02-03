@@ -5,5 +5,26 @@
   "Environmental Impact": "تأثیرات زیست‌محیطی",
   "Case Studies": "مطالعات موردی",
   "Contact": "تماس با ما",
-  "Request Quote": "درخواست قیمت"
+  "Request Consultation": "درخواست مشاوره",
+  
+  "Full Name": "نام و نام خانوادگی",
+  "Email": "ایمیل ",
+  "Phone Number": "شماره تماس",
+  "Company/Organization": "شرکت/سازمان",
+  "Optional": "اختیاری",
+  "Country/City": "کشور/شهر",
+  "Industry Type": "زمینه‌ی فعالیت",
+  "Select an option": "یک گزینه انتخاب کنید",
+  "Agriculture": "کشاورزی",
+  "Scientific Research": "تحقیقات علمی",
+  "Municipal Greenery": "شهرداری و فضای سبز",
+  "Environmental Protection": "حفاظت از محیط‌زیست",
+  "Other": "سایر",
+  "Please specify": "لطفاً مشخص کنید",
+  "What information do you need about Biobased Mulch?": "چه اطلاعاتی درباره Biobased Mulch نیاز دارید؟",
+  "Preferred Contact Method": "ترجیح تماس",
+  "Phone Call": "تماس تلفنی",
+  "WhatsApp/Telegram": "واتساپ/تلگرام",
+  "Submit": "ارسال",
+  "Thank you for your request! We will contact you soon.": "با تشکر از درخواست شما! به زودی با شما تماس خواهیم گرفت."
 }

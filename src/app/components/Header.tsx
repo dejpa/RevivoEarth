@@ -69,9 +69,11 @@ export default function Header() {
 
             {/* دکمه‌های سمت راست (زبان و CTA) */}
             <div className="hidden lg:flex items-center">
-                <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950">
-                 {t("Request Quote")}
-                </button>
+                <Link href="/request-consulation">
+                    <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950">
+                     {t("Request Consultation")}
+                    </button>
+                </Link>
                 <div className="ml-4">
                     <select 
                         className="bg-zinc-100 text-green-950 border-none"
@@ -105,12 +107,14 @@ export default function Header() {
                     ))}
                 </nav>
                 <div className="mt-4">
-                <button
-                    onClick={() => setIsMenuOpen(false)}
-                    className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full"
-                    >
-                    Request a Quote
-                </button>
+                <Link href={"/request-consulation"}>
+                    <button
+                        onClick={() => setIsMenuOpen(false)}
+                        className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full"
+                        >
+                        Request Consultation
+                    </button>
+                </Link>
                 </div>
                 <div className="mt-4">
                     <select
