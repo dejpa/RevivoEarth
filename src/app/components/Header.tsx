@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslation } from "next-i18next";
 
-const locales = [ "en","fa", "ar"]; 
+const locales = [ "en","zh", "ar"]; 
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false); 
@@ -82,7 +82,7 @@ export default function Header() {
                         disabled={isPending}>
                     {locales.map((locale) => (
                         <option key={locale} value={locale}>
-                            {locale === "en" ? "English" : locale === "fa" ? "فارسی" : "العربية"}
+                            {locale === "en" ? "English" : locale === "zh" ? "Chinese" : "العربية"}
                         </option>
                     ))}
                     </select>
@@ -125,7 +125,7 @@ export default function Header() {
                     >
                     {locales.map((locale) => (
                         <option key={locale} value={locale}>
-                        {locale === "en" ? "English" : locale === "fa" ? "فارسی" : "العربية"}
+                        {locale === "en" ? "English" : locale === "zh" ? "Chinese" : "العربية"}
                         </option>
                     ))}
                     </select>
