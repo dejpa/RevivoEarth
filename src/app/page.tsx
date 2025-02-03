@@ -167,7 +167,7 @@ export default function Home() {
             href="/contact"
             className="bg-white text-green-950 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
           >
-            Get a Quote
+            Contact Us
           </a>
         </div>
       </section>
