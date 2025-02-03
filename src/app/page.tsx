@@ -7,11 +7,11 @@ import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
-  useEffect(() => {
-    setTimeout(() => {
-      window.open("https://www.dejpa.com", "_blank");
-    }, 10000); // 10 ثانیه بعد
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     window.open("https://www.dejpa.com", "_blank");
+  //   }, 10000); // 10 ثانیه بعد
+  // }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -143,12 +143,12 @@ export default function Home() {
           {/* link to dejpa */}
           <div className="mt-12">
             <a
-              href="https://dejpa.com"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-950 hover:text-green-700 underline"
             >
-              Learn more about our commitment to sustainability at Dejpa.
+              Learn more about our commitment to sustainability.
             </a>
           </div>
         </div>
