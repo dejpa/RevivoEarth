@@ -33,7 +33,7 @@ export const metadata = {
     site: "@DejpaOfficial",
     title: "Revolutionizing Dust Control with Bio-Oil Mulch",
     description: "Discover the power of Bio-Oil Mulch in sustainable dust control. Learn more and visit Dejpa for more details.",
-    image: "https://mulch.yourdomain.com/images/twitter-card.jpg",
+    // image: "https://mulch.yourdomain.com/images/twitter-card.jpg",
   },
 };
 

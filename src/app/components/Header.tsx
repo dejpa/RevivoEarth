@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState , useTransition } from "react";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { usePathname, useRouter } from "next/navigation";
-import { useTranslation } from "next-i18next";
+import { getTranslator } from "@/i18n";
+// import { useTranslation } from "next-i18next";
 
 const locales = [ "en","zh", "ar"]; 
 
@@ -13,14 +14,15 @@ export default function Header() {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
     const pathname = usePathname();
-    const {t} = useTranslation();
 
+    
     // استخراج زبان فعلی از مسیر
     const pathSegments = pathname.split("/");
     const currentLocale = locales.includes(pathSegments[1]) ? pathSegments[1] : "en";
+    const t = getTranslator(currentLocale);
  
      // تغییر زبان
-      const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
+     const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const newLocale = event.target.value;
 
         let newPathname;
@@ -43,13 +45,14 @@ export default function Header() {
 
 
     const navLinks = [
-        { href: "/", label: t("Home") },
-        { href: "/about-us", label: t("About") },
-        { href: "/applications", label: t("Applications") },
-        { href: "/environmental-impact", label: t("Environmental Impact") },
-        { href: "/case-studies", label: t("Case Studies") },
-        { href: "/contact", label: t("Contact") }
+        { href: "/", label: t("home") },
+        { href: "/about-us", label: t("about") },
+        { href: "/applications", label: t("applications") },
+        { href: "/environmental-impact", label: t("environmentalImpact") },
+        { href: "/case-studies", label: t("caseStudies") },
+        { href: "/contact", label: t("contact") }
     ];
+    
 
     return (
         <header className="w-full bg-zinc-200 text-green-950 p-4 flex justify-between items-center drop-shadow-md fixed z-50 blur-xs">
@@ -71,7 +74,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center">
                 <Link href="/request-consulation">
                     <button className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950">
-                     {t("Request Consultation")}
+                    {t("requestConsultation")}
                     </button>
                 </Link>
                 <div className="ml-4">
@@ -112,7 +115,7 @@ export default function Header() {
                         onClick={() => setIsMenuOpen(false)}
                         className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full"
                         >
-                        Request Consultation
+                        {t("requestConsultation")}
                     </button>
                 </Link>
                 </div>

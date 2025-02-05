@@ -1,13 +1,11 @@
-// src/i18n.ts
-import { notFound } from 'next/navigation';
-import { getRequestConfig } from 'next-intl/server';
+import { createTranslator } from 'next-intl';
 
-const locales = ['en', 'fa', 'ar'];
-
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as any)) notFound();
-
-  return {
-    messages: (await import(`../locales/${locale}.json`)).default
-  };
-});
+export function getTranslator(locale: string) {
+  try {
+    const messages = require(`./locales/${locale}.json`);
+    return createTranslator({ locale, messages });
+  } catch (error) {
+    console.error("Translation file not found for locale:", locale);
+    return createTranslator({ locale: "en", messages: {} });
+  }
+}
