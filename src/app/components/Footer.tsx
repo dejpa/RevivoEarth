@@ -9,7 +9,7 @@ export default function Footer() {
                     <h3 className="text-md md:text-lg font-bold">Contact Us</h3>
                     <p>Address: 123 Green St, Eco City</p>
                     <p>Phone: +123 456 7890</p>
-                    <p>Email: info@biomulch.com</p>
+                    <p>Email: info@RevivoEarth.com</p>
                 </div>
                 <div className='md-1/3'>
                     <h3 className="text-md md:text-lg font-bold">Quick Links</h3>
@@ -24,7 +24,7 @@ export default function Footer() {
                     <h3 className="text-md md:text-lg font-bold">Follow Us</h3>
                     <div className="flex space-x-4">
                         <a
-                        href="https://www.instagram.com/yourcompany"
+                        href="https://www.instagram.com/@revivoearth"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white"

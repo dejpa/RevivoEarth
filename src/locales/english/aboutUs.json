@@ -1,0 +1,21 @@
+{
+  "aboutUs": "About Us",
+  "description": "RevivoEarth is an independent, grassroots, and transnational movement dedicated to raising awareness, fostering participation, and advocating for solutions to environmental crises. We focus on identifying and addressing solvable ecological challenges by leveraging knowledge, experience, and collaboration between experts and the public. Our core mission revolves around land restoration, combating desertification, reducing air pollution, and reviving damaged ecosystems — without engaging in product sales, advertising, or political agendas. Our aim is to cultivate a shared sense of environmental responsibility, even through small, meaningful actions. We turn awareness into action and voices into change by producing educational content, organizing public campaigns, building expert networks, and using digital platforms strategically.",
+
+  "whoWeAreTitle": "Who We Are",
+  "whoWeAreText": "We are an independent environmental movement committed to awareness, inspiration, and advocacy in response to ecological crises. At RevivoEarth, we believe sustainable change begins with knowledge, community, and bold yet practical solutions. We are not affiliated with any political or commercial entity and act solely out of a collective sense of responsibility to the Earth.",
+
+  "historyTitle": "Our Story",
+  "historyText": "RevivoEarth began as a grassroots initiative by a group of environmentally conscious individuals who believed awareness must lead to action. What started as educational content about desertification and dust pollution has grown into a strategic and people-powered movement. Our journey has been marked by innovation, transparency, and a deep belief in bottom-up change.",
+
+  "missionValuesTitle": "Our Mission & Values",
+  "missionText": "Our mission is to foster environmental responsibility through education, digital activism, and strategic advocacy — with a focus on land restoration, combating desertification, and strengthening social responsibility, without any involvement in product sales or political affiliations.",
+
+  "valuesList": {
+    "socialResponsibility": "Social Responsibility: Change begins with us — as individuals, communities, and institutions.",
+    "scienceBased": "Science-Based: Our solutions are grounded in research, scalable models, and real-world experience.",
+    "transparency": "Transparency & Integrity: We communicate with honesty and clarity.",
+    "innovation": "Innovation: We welcome new ideas and approaches to ecosystem restoration.",
+    "collaboration": "Collaboration: We work alongside academics, experts, organizations, and communities to achieve shared goals."
+  }
+}

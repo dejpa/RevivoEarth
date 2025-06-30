@@ -1,4 +1,4 @@
 export default {
-  locales: ['en', 'fa' , 'ar'],  // زبان‌های پشتیبانی‌شده
+  locales: ['en', 'fa' , 'ar', 'fa'],  // زبان‌های پشتیبانی‌شده
   defaultLocale: 'en',    // زبان پیش‌فرض
 };

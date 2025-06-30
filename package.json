@@ -11,7 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "i18next": "^24.2.2",
-    "next": "15.1.6",
+    "next": "^15.3.3",
     "next-i18next": "^15.4.1",
     "next-intl": "^3.26.3",
     "react": "^19.0.0",

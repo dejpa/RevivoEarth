@@ -1,8 +1,9 @@
 {
   "home": "الرئيسية",
-  "about": "معلومات عنا",
+  "about": "من نحن",
   "applications": "التطبيقات",
   "environmentalImpact": "الأثر البيئي",
+  "blogs": "المدونة",
   "caseStudies": "دراسات الحالة",
   "contact": "اتصل بنا",
   "requestConsultation": "طلب استشارة",
@@ -10,6 +11,7 @@
   "english": "الإنجليزية",
   "chinese": "الصينية",
   "arabic": "العربية",
+  "farsi": "الفارسية",
   "welcomeMessage": "مرحبًا بك في موقعنا!",
   "services": "خدماتنا",
   "learnMore": "تعرف على المزيد"
