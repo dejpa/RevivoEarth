@@ -7,7 +7,10 @@
 
   "aboutUs": "About RevivoEarth",
   "aboutUsDescription": "RevivoEarth is a transformative movement committed to identifying, analyzing, and addressing solvable environmental challenges through scientific methods and practical ecosystem restoration strategies.",
-
+  
+  "mainTitle": "Launching a Movement to Heal the Earth",
+  "mainDescription": "RevivoEarth is a knowledge-based, non-commercial initiative focused on restoring damaged ecosystems through public awareness, collective action, and science-driven solutions. We don’t sell—we strive to inspire, engage, and empower individuals to make a real impact on the planet’s future.",
+  
   "ourVision": "Our Vision",
   "ourVisionDescription": "To become a leading national and global force in rehabilitating damaged environments and ecosystems.",
 
@@ -31,5 +34,6 @@
   "contactUs": "Get Involved",
   "contactUsDescription": "Join our growing network of environmental professionals, advocates, and concerned citizens working to revive fragile ecosystems.",
 
+  "makeChange": "Ready to Make a Change?",
   "email": "ContactEmail@RevivoEarth.org"
 }
