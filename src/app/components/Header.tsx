@@ -18,8 +18,9 @@ export type NavLink = {
 const getNavLinks = (t: (key: string) => string, currentLocale: string): NavLink[] => [
   { href: `/${currentLocale}`, label: t("header.home") },
   { href: `/${currentLocale}/blogs`, label: t("header.blogs") },
+  { href: `/${currentLocale}/solutions`, label: t("header.solutions") },
   { href: `/${currentLocale}/about-us`,label: t("header.about") },
-  { href: `/${currentLocale}/contact`, label: t("header.contact") }
+  { href: `/${currentLocale}/contact`, label: t("header.contact") },
 ];
 
 const NavItem = ({ link, openDropdown, setOpenDropdown, isMobile = false }: {
