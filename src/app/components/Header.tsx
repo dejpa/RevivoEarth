@@ -93,7 +93,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <nav className="hidden lg:flex space-x-6">
+      <nav className="hidden lg:flex space-x-6 rtl:space-x-reverse">
         {navLinks.map((link) => (
           <NavItem key={link.href} link={link} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} />
         ))}
@@ -135,14 +135,14 @@ export default function Header() {
             ))}
           </nav>
           <div className="mt-4">
-            <Link href="/request-consulation">
+            {/* <Link href="/request-consulation">
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="bg-green-950 text-white px-4 py-2 rounded hover:bg-white hover:text-green-950 w-full"
               >
                 {t("requestConsultation")}
               </button>
-            </Link>
+            </Link> */}
           </div>
           <div className="mt-4">
             <select

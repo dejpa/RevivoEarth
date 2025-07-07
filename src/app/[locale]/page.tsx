@@ -32,7 +32,7 @@ export default function Home() {
           <p className="text-xl mb-8">
             {t("home.heroDescription")}
           </p>
-          <div className="space-x-4">
+          <div className="space-x-4 rtl:space-x-reverse">
             <Link href="/about-us" className="bg-zinc-200 text-green-950 px-6 py-3 rounded-lg hover:bg-lime-600 hover:text-white transition duration-300">
               {t("home.learnMore")}
             </Link>
@@ -58,10 +58,10 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-700">
-            A Game-Changer for Soil Protection
+            {t("home.mainTitle")}
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Bio-Oil Mulch is an innovative solution designed to combat soil erosion, stabilize sand dunes, and promote sustainable land management.
+            {t("home.mainDescription")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Vision */}
@@ -105,7 +105,7 @@ export default function Home() {
       <section className="py-16 bg-green-950 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-8">
-            Ready to Make a Change?
+            {t("home.makeChange")}
           </h2>
           <p className="text-xl mb-8">
             {t("home.contactUsDescription")}
