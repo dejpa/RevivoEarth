@@ -26,7 +26,7 @@ export default function AboutUs() {
         </div>
         <div className="container mx-auto text-center relative z-10">
           <h1 className="text-5xl font-bold mb-4"> {t("aboutUs.aboutUs")}</h1>
-          <p className="text-xl">
+          <p className="md:text-xl">
             {t("aboutUs.description")}
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function AboutUs() {
             {t("aboutUs.missionText")}
           </p>
           <ul className="list-disc list-inside text-gray-600">
-            <li className="text-green-950">{t("aboutUs.valuesList.socialResponsibility")}</li>
+            <li>{t("aboutUs.valuesList.socialResponsibility")}</li>
             <li>{t("aboutUs.valuesList.scienceBased")}</li>
             <li>{t("aboutUs.valuesList.transparency")}</li>
             <li>{t("aboutUs.valuesList.innovation")}</li>
@@ -118,15 +118,21 @@ export default function AboutUs() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-green-950 text-white text-center">
-        <div className="container mx-auto">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8">Ready to Make a Change?</h2>
+      {/* Call to Action */}
+      <section className="py-16 bg-green-950 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">
+            {t("home.makeChange")}
+          </h2>
           <p className="text-xl mb-8">
-            Join us in our mission to create a sustainable future. Contact us today to learn more about our products and services.
+            {t("home.contactUsDescription")}
           </p>
-          <Link href="/contact" className="bg-white text-green-800 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
-            Contact Us
-          </Link>
+          <a
+            href="/contact"
+            className="bg-white text-green-950 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
+          >
+            {t("home.contactUs")}
+          </a>
         </div>
       </section>
     </div>

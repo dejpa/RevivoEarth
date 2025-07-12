@@ -14,6 +14,17 @@
     --foreground: #ededed;
   }
 }
+@font-face {
+  font-family: 'IranSans';
+  src: url('/fonts/iransans/IRANSansWeb.woff') format('woff'),
+  url('/fonts/iransans/IRANSansWeb_UltraLight.woff') format('woff'),
+  url('/fonts/iransans/IRANSansWeb_Medium.woff') format('woff'),
+  url('/fonts/iransans/IRANSansWeb_Light.woff') format('woff'),
+  url('/fonts/iransans/IRANSansWeb_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   color: var(--foreground);
@@ -23,4 +34,9 @@ body {
 .thd-toggle {
   cursor: pointer;
   list-style-type: none;
+}
+
+
+.font-iransans {
+  font-family: 'IranSans', sans-serif;
 }

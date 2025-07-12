@@ -90,7 +90,7 @@ export default function Header() {
     <header className="w-full bg-zinc-200 text-green-950 p-4 flex justify-between items-center drop-shadow-md fixed z-50">
       <div className="flex items-center">
         <Link href="/${currentLocale}">
-          <img src="/logo.png" alt="Company Logo" className="h-24" />
+          <img src="/logo.png" alt="Company Logo" className="h-[4rem]" />
         </Link>
       </div>
 

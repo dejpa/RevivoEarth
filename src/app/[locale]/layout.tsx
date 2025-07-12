@@ -35,10 +35,13 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   const direction = ["fa", "ar"].includes(params.locale) ? "rtl" : "ltr";
+  const isRTL = ["fa", "ar"].includes(params.locale);
+  const fontClass = isRTL ? "font-iransans" : `${geistSans.variable} ${geistMono.variable}`;
   return (
+    
     <html lang={params.locale} dir={direction}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
+        className={`${fontClass} antialiased bg-white text-gray-900`}
       >
         <Header />
         <main>{children}</main>
