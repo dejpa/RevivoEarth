@@ -25,7 +25,7 @@ export default function AboutUs() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto text-center relative z-10">
-          <h1 className="text-5xl font-bold mb-4"> {t("aboutUs.aboutUs")}</h1>
+          <h1 className="text-2xl md:text-5xl font-bold mb-4"> {t("aboutUs.aboutUs")}</h1>
           <p className="md:text-xl">
             {t("aboutUs.description")}
           </p>
@@ -46,7 +46,7 @@ export default function AboutUs() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("aboutUs.historyTitle")}</h2>
-          <p className="text-gray-600 mb-8">
+          <p className="md:text-xl text-gray-600 mb-8">
            {t("aboutUs.historyText")}
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function AboutUs() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("aboutUs.missionValuesTitle")}</h2>
-          <p className="text-gray-600 mb-8">
+          <p className="md:text-xl text-gray-600 mb-8">
             {t("aboutUs.missionText")}
           </p>
           <ul className="list-disc list-inside text-gray-600">
@@ -89,7 +89,7 @@ export default function AboutUs() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">Our Team</h2>
-          <p className="text-gray-600 mb-8">
+          <p className="md:text-xl text-gray-600 mb-8">
             Our team is composed of passionate professionals with expertise in environmental science, engineering, and business. Together, we are committed to delivering innovative solutions that make a difference.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -124,12 +124,12 @@ export default function AboutUs() {
           <h2 className="text-2xl md:text-4xl font-bold mb-8">
             {t("home.makeChange")}
           </h2>
-          <p className="text-xl mb-8">
+          <p className="md:text-xl mb-8">
             {t("home.contactUsDescription")}
           </p>
           <a
             href="/contact"
-            className="bg-white text-green-950 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
+            className="md:text-xl bg-white text-green-950 px-2 md:px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
           >
             {t("home.contactUs")}
           </a>

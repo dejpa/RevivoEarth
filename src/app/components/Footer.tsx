@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
                 <div className='text-sm md:text-lg md-1/3'>
                     <h3 className="text-md md:text-lg font-bold">{t("footer.followUs")}</h3>
-                    <div className="flex space-x-4 rtl:space-x-reverse">
+                    <div className="flex space-x-1 md:space-x-4 rtl:space-x-reverse">
                         <a
                         href="https://www.instagram.com/@revivoearth"
                         target="_blank"
