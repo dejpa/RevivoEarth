@@ -39,7 +39,7 @@ export default function Footer() {
                     <h3 className="text-md md:text-lg font-bold">{t("footer.followUs")}</h3>
                     <div className="flex space-x-1 md:space-x-4 rtl:space-x-reverse">
                         <a
-                        href="https://www.instagram.com/@revivoearth"
+                        href="https://www.instagram.com/revivoearth?igsh=Zzc0NzYyaW95anNx"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white"
