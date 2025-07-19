@@ -12,10 +12,20 @@
   "missionText": "Our mission is to foster environmental responsibility through education, digital activism, and strategic advocacy — with a focus on land restoration, combating desertification, and strengthening social responsibility, without any involvement in product sales or political affiliations.",
 
   "valuesList": {
-    "socialResponsibility": "Social Responsibility: Change begins with us — as individuals, communities, and institutions.",
+    "socialResponsibility": "Social Responsibility: Change begins with us, as individuals, communities, and institutions.",
     "scienceBased": "Science-Based: Our solutions are grounded in research, scalable models, and real-world experience.",
     "transparency": "Transparency & Integrity: We communicate with honesty and clarity.",
     "innovation": "Innovation: We welcome new ideas and approaches to ecosystem restoration.",
     "collaboration": "Collaboration: We work alongside academics, experts, organizations, and communities to achieve shared goals."
-  }
+  },
+
+    "ourTeam": " Our Team",
+    "ourTeamDescription": "RevivoEarth is powered by a diverse team of experts, innovators, and environmental advocates committed to restoring ecosystems and driving meaningful change across the globe.",
+    "manager": "name 1",
+    "managerDescription": "Chief Operation Officer",
+    "development": "name 2",
+    "developmentDescription": "Head of Reasearch & Development",
+    "ceo": "name 3",
+    "ceoDescription": "CEO & Founder"   
+  
 }

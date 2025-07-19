@@ -59,12 +59,12 @@ export default function AboutUs() {
           <p className="md:text-xl text-gray-600 mb-8">
             {t("aboutUs.missionText")}
           </p>
-          <ul className="list-disc list-inside text-gray-600">
-            <li>{t("aboutUs.valuesList.socialResponsibility")}</li>
-            <li>{t("aboutUs.valuesList.scienceBased")}</li>
-            <li>{t("aboutUs.valuesList.transparency")}</li>
-            <li>{t("aboutUs.valuesList.innovation")}</li>
-            <li>{t("aboutUs.valuesList.collaboration")}</li>
+          <ul className="list-inside text-gray-600">
+            <li>❇️  {t("aboutUs.valuesList.socialResponsibility")}</li>
+            <li>❇️  {t("aboutUs.valuesList.scienceBased")}</li>
+            <li>❇️  {t("aboutUs.valuesList.transparency")}</li>
+            <li>❇️  {t("aboutUs.valuesList.innovation")}</li>
+            <li>❇️  {t("aboutUs.valuesList.collaboration")}</li>
           </ul>
         </div>
       </section>
@@ -88,30 +88,30 @@ export default function AboutUs() {
       {/* تیم ما */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">Our Team</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("aboutUs.ourTeam")}</h2>
           <p className="md:text-xl text-gray-600 mb-8">
-            Our team is composed of passionate professionals with expertise in environmental science, engineering, and business. Together, we are committed to delivering innovative solutions that make a difference.
+            {t("aboutUs.ourTeamDescription")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* عضو تیم ۱ */}
             <div className="text-center">
               <img src="/team-member-1.jpeg" alt="Team Member 1" className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h3 className="text-xl font-semibold">John Doe</h3>
-              <p className="text-gray-600">CEO & Founder</p>
+              <h3 className="text-xl font-semibold">{t("aboutUs.manager")}</h3>
+              <p className="text-gray-600">{t("aboutUs.managerDescription")}</p>
             </div>
 
             {/* عضو تیم ۲ */}
             <div className="text-center">
               <img src="/team-member-2.jpeg" alt="Team Member 2" className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h3 className="text-xl font-semibold">Jane Smith</h3>
-              <p className="text-gray-600">Head of Research & Development</p>
+              <h3 className="text-xl font-semibold">{t("aboutUs.development")}</h3>
+              <p className="text-gray-600">{t("aboutUs.developmentDescription")}</p>
             </div>
 
             {/* عضو تیم ۳ */}
             <div className="text-center">
               <img src="/team-member-3.jpeg" alt="Team Member 3" className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h3 className="text-xl font-semibold">Mike Johnson</h3>
-              <p className="text-gray-600">Chief Operations Officer</p>
+              <h3 className="text-xl font-semibold">{t("aboutUs.ceo")}</h3>
+              <p className="text-gray-600">{t("aboutUs.ceoDescription")}</p>
             </div>
           </div>
         </div>
