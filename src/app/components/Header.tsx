@@ -49,11 +49,11 @@ const NavItem = ({ link, openDropdown, setOpenDropdown, isMobile = false }: {
       <Link
         href={link.href}
         onClick={() => setOpenDropdown(isOpen ? null : link.href)}
-        className={`flex items-center justify-between w-full font-medium text-green-950 hover:text-white transition ${
+        className={`flex items-center justify-between w-full text-sm md:text-base font-medium text-green-950 hover:text-white transition ${
           isMobile ? "py-2 px-4" : ""
         }`}
       >
-        {link.label} {link.subLinks && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+        {link.label} {link.subLinks && <ChevronDownIcon className="h-2 w-2 md:w-4 md:h-4 ml-2" />}
       </Link>
     </div>
   );
@@ -108,13 +108,13 @@ export default function Header() {
         </Link> */}
         <div className="ml-4">
           <select
-            className="bg-zinc-100 text-green-950 border-none"
+            className="bg-zinc-100 rounded-md mx-auto text-green-950 border-none "
             onChange={changeLanguage}
             value={currentLocale}
             disabled={isPending}
           >
             {locales.map((locale) => (
-              <option key={locale} value={locale}>
+              <option key={locale} value={locale} >
                 {locale === "en" ? "English" : locale === "fa" ? "فارسی" : "العربية"}
               </option>
             ))}
@@ -147,13 +147,13 @@ export default function Header() {
           </div>
           <div className="mt-4">
             <select
-              className="bg-green-700 text-white border-none p-2 rounded w-full"
+              className="bg-green-700 text-white border-none p-2 rounded w-full "
               onChange={changeLanguage}
               value={currentLocale}
               disabled={isPending}
             >
               {locales.map((locale) => (
-                <option key={locale} value={locale}>
+                <option key={locale} value={locale} className=" ">
                   {locale === "en" ? "English" : locale === "fa" ? "فارسی" : "العربية"}
                 </option>
               ))}
