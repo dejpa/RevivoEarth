@@ -18,8 +18,8 @@ export default function Footer() {
 
 
     return (
-        <footer className="bg-zinc-200 text-green-950 p-8">
-            <div className="container mx-auto flex flex-wrap justify-between">
+        <footer className="bg-zinc-200 text-green-950 ">
+            <div className="container p-8 mx-auto flex flex-wrap justify-between">
                 <div className='md-1/3 text-sm md:text-lg'>
                     <h3 className=" font-bold">{t("footer.contactUs")}</h3>
                     {/* <p>{t("footer.address")}: 123 Green St, Eco City</p>
@@ -65,8 +65,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="text-sm md:text-lg text-center mt-8">
-                <p>© 2025 RevivoEarth. All rights reserved.</p>
+            <div className="bg-white text-sm md:text-lg text-center mt-8">
+                <p className="py-3">{t("footer.rights")}</p>
             </div>
         </footer>
     );
