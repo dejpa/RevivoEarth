@@ -4,11 +4,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getTranslator } from "@/i18n";
+import { useState } from "react";
 
 const locales = ["en", "ar", "fa"];
 
 export default function Articles() {
   const pathname = usePathname();
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   // Extract current language from path
   const pathSegments = pathname.split("/");
@@ -23,6 +25,7 @@ export default function Articles() {
       excerpt: t("articles.articlesName.article1.excerpt"),
       date: "1979-11-01",
       category: t("articles.articlesName.article1.categories"),
+      categoryKey: "oilMulch",
       image: "/articles/National Geographic Magazine November 1979.webp",
       readTime: "20"
     },
@@ -32,6 +35,7 @@ export default function Articles() {
       excerpt: t("articles.article2.excerpt"),
       date: "2023-09-28",
       category: t("articles.categories.environment"),
+      categoryKey: "environment",
       image: "/article2.webp",
       readTime: "7 min"
     },
@@ -41,6 +45,7 @@ export default function Articles() {
       excerpt: t("articles.article3.excerpt"),
       date: "2023-08-12",
       category: t("articles.categories.innovation"),
+      categoryKey: "innovation",
       image: "/article3.webp",
       readTime: "4 min"
     },
@@ -50,10 +55,21 @@ export default function Articles() {
       excerpt: t("articles.article4.excerpt"),
       date: "2023-07-05",
       category: t("articles.categories.sustainability"),
+      categoryKey: "sustainability",
       image: "/article4.webp",
       readTime: "6 min"
     }
   ];
+
+  // Filter articles based on selected category
+  const filteredArticles = selectedCategory === "all" 
+    ? articles 
+    : articles.filter(article => article.categoryKey === selectedCategory);
+
+  // Handle category selection
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+  };
 
   return (
     <div className="bg-white text-gray-800">
@@ -75,26 +91,61 @@ export default function Articles() {
         <div className="container mx-auto px-4">
           {/* Categories Filter */}
           <div className="flex flex-wrap gap-4 mb-12">
-            <button className="px-4 py-2 bg-green-950 text-white rounded-full">
+            <button 
+              onClick={() => handleCategorySelect("all")}
+              className={`px-4 py-2 rounded-full transition ${
+                selectedCategory === "all" 
+                  ? "bg-green-950 text-white" 
+                  : "border border-gray-300 hover:bg-gray-100"
+              }`}
+            >
               {t("articles.allCategories")}
             </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition">
+            <button 
+              onClick={() => handleCategorySelect("oilMulch")}
+              className={`px-4 py-2 rounded-full transition ${
+                selectedCategory === "oilMulch" 
+                  ? "bg-green-950 text-white" 
+                  : "border border-gray-300 hover:bg-gray-100"
+              }`}
+            >
               {t("articles.categories.oilMulch")}
             </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition">
+            <button 
+              onClick={() => handleCategorySelect("environment")}
+              className={`px-4 py-2 rounded-full transition ${
+                selectedCategory === "environment" 
+                  ? "bg-green-950 text-white" 
+                  : "border border-gray-300 hover:bg-gray-100"
+              }`}
+            >
               {t("articles.categories.environment")}
             </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition">
+            <button 
+              onClick={() => handleCategorySelect("innovation")}
+              className={`px-4 py-2 rounded-full transition ${
+                selectedCategory === "innovation" 
+                  ? "bg-green-950 text-white" 
+                  : "border border-gray-300 hover:bg-gray-100"
+              }`}
+            >
               {t("articles.categories.innovation")}
             </button>
-            <button className="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition">
+            <button 
+              onClick={() => handleCategorySelect("sustainability")}
+              className={`px-4 py-2 rounded-full transition ${
+                selectedCategory === "sustainability" 
+                  ? "bg-green-950 text-white" 
+                  : "border border-gray-300 hover:bg-gray-100"
+              }`}
+            >
               {t("articles.categories.sustainability")}
             </button>
           </div>
 
           {/* Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article) => (
+            {filteredArticles.map((article) => (
               <article key={article.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
                 <div className="h-48 overflow-hidden">
                   <img 
