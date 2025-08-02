@@ -10,8 +10,7 @@ const locales = ["en", "ar", "fa"];
 export default function Home() {
 
   const pathname = usePathname();
-
-
+  
     // استخراج زبان فعلی از مسیر
   const pathSegments = pathname.split("/");
   const currentLocale = locales.includes(pathSegments[1]) ? pathSegments[1] : "en";
