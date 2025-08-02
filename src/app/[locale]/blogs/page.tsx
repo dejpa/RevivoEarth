@@ -27,7 +27,8 @@ export default function Articles() {
       category: t("articles.articlesName.article1.categories"),
       categoryKey: "oilMulch",
       image: "/articles/National Geographic Magazine November 1979.webp",
-      readTime: "20"
+      readTime: "20",
+      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
     },
     {
       id: 2,
@@ -37,7 +38,8 @@ export default function Articles() {
       category: t("articles.categories.environment"),
       categoryKey: "environment",
       image: "/article2.webp",
-      readTime: "7 min"
+      readTime: "7 min",
+      pdfUrl: "/articles/article2.pdf"
     },
     {
       id: 3,
@@ -47,7 +49,8 @@ export default function Articles() {
       category: t("articles.categories.innovation"),
       categoryKey: "innovation",
       image: "/article3.webp",
-      readTime: "4 min"
+      readTime: "4 min",
+      pdfUrl: "/articles/article3.pdf"
     },
     {
       id: 4,
@@ -57,7 +60,8 @@ export default function Articles() {
       category: t("articles.categories.sustainability"),
       categoryKey: "sustainability",
       image: "/article4.webp",
-      readTime: "6 min"
+      readTime: "6 min",
+      pdfUrl: "/articles/article4.pdf"
     }
   ];
 
@@ -146,7 +150,11 @@ export default function Articles() {
           {/* Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
-              <article key={article.id} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+              <article 
+                key={article.id} 
+                className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
+                onClick={() => window.open(`/${currentLocale}/pdf-viewer?url=${encodeURIComponent(article.pdfUrl)}`, '_blank')}
+              >
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={article.image} 
@@ -163,12 +171,14 @@ export default function Articles() {
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">{article.readTime} {t("articles.read")}</span>
-                    <Link 
-                      href={`/${currentLocale}/articles/${article.id}`}
-                      className="text-green-950 font-medium hover:underline"
-                    >
-                      {t("articles.readMore")}
-                    </Link>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-950 font-medium hover:underline">
+                        {t("articles.readMore")}
+                      </span>
+                      <svg className="w-4 h-4 text-green-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </article>
