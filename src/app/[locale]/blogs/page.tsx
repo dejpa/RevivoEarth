@@ -11,6 +11,8 @@ const locales = ["en", "ar", "fa"];
 export default function Articles() {
   const pathname = usePathname();
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 6; // Number of articles to show per page
 
   // Extract current language from path
   const pathSegments = pathname.split("/");
@@ -23,6 +25,39 @@ export default function Articles() {
       id: 1,
       title: t("articles.articlesName.article1.title"),
       excerpt: t("articles.articlesName.article1.excerpt"),
+      date: t("articles.articlesName.article1.date"),
+      category: t("articles.articlesName.article1.categories"),
+      categoryKey: "oilMulch",
+      image: "/articles/National Geographic Magazine November 1979.webp",
+      readTime: t("articles.articlesName.article1.readTime"),
+      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
+    },
+    {
+      id: 2,
+      title: t("articles.articlesName.article2.title"),
+      excerpt: t("articles.articlesName.article2.excerpt"),
+      date: t("articles.articlesName.article2.date"),
+      category: t("articles.articlesName.article2.categories"),
+      categoryKey: "oilMulch",
+      image: "/articles/Short-term effect of oil-mulch on vegetation dynamic.webp",
+      readTime: t("articles.articlesName.article2.readTime"),
+      pdfUrl: "/articles/Short-term effect of oil-mulch on vegetation dynamic.pdf"
+    },
+    {
+      id: 3,
+      title: t("articles.articlesName.article3.title"),
+      excerpt: t("articles.articlesName.article3.excerpt"),
+      date: t("articles.articlesName.article3.date"),
+      category: t("articles.articlesName.article3.categories"),
+      categoryKey: "oilMulch",
+      image: "/articles/Petroleum mulch studies for row crops in California.webp",
+      readTime: t("articles.articlesName.article3.readTime"),
+      pdfUrl: "/articles/Petroleum mulch studies for row crops in California.pdf"
+    },
+    {
+      id: 4,
+      title: t("articles.articlesName.article1.title"),
+      excerpt: t("articles.articlesName.article1.excerpt"),
       date: "1979-11-01",
       category: t("articles.articlesName.article1.categories"),
       categoryKey: "oilMulch",
@@ -31,37 +66,37 @@ export default function Articles() {
       pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
     },
     {
-      id: 2,
-      title: t("articles.article2.title"),
-      excerpt: t("articles.article2.excerpt"),
-      date: "2023-09-28",
-      category: t("articles.categories.environment"),
-      categoryKey: "environment",
-      image: "/article2.webp",
-      readTime: "7 min",
-      pdfUrl: "/articles/article2.pdf"
+      id: 5,
+      title: t("articles.articlesName.article1.title"),
+      excerpt: t("articles.articlesName.article1.excerpt"),
+      date: "1979-11-01",
+      category: t("articles.articlesName.article1.categories"),
+      categoryKey: "oilMulch",
+      image: "/articles/National Geographic Magazine November 1979.webp",
+      readTime: "20",
+      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
     },
     {
-      id: 3,
-      title: t("articles.article3.title"),
-      excerpt: t("articles.article3.excerpt"),
-      date: "2023-08-12",
-      category: t("articles.categories.innovation"),
-      categoryKey: "innovation",
-      image: "/article3.webp",
-      readTime: "4 min",
-      pdfUrl: "/articles/article3.pdf"
+      id: 6,
+      title: t("articles.articlesName.article1.title"),
+      excerpt: t("articles.articlesName.article1.excerpt"),
+      date: "1979-11-01",
+      category: t("articles.articlesName.article1.categories"),
+      categoryKey: "oilMulch",
+      image: "/articles/National Geographic Magazine November 1979.webp",
+      readTime: "20",
+      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
     },
     {
-      id: 4,
-      title: t("articles.article4.title"),
-      excerpt: t("articles.article4.excerpt"),
-      date: "2023-07-05",
-      category: t("articles.categories.sustainability"),
-      categoryKey: "sustainability",
-      image: "/article4.webp",
-      readTime: "6 min",
-      pdfUrl: "/articles/article4.pdf"
+      id: 7,
+      title: t("articles.articlesName.article1.title"),
+      excerpt: t("articles.articlesName.article1.excerpt"),
+      date: "1979-11-01",
+      category: t("articles.articlesName.article1.categories"),
+      categoryKey: "oilMulch",
+      image: "/articles/National Geographic Magazine November 1979.webp",
+      readTime: "20",
+      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
     }
   ];
 
@@ -70,10 +105,56 @@ export default function Articles() {
     ? articles 
     : articles.filter(article => article.categoryKey === selectedCategory);
 
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const endIndex = startIndex + articlesPerPage;
+  const currentArticles = filteredArticles.slice(startIndex, endIndex);
+
   // Handle category selection
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
+    setCurrentPage(1); // Reset to first page when changing category
   };
+
+  // Handle page navigation
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  // Generate page numbers to display
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages if total is small
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show pages around current page
+      const start = Math.max(1, currentPage - 2);
+      const end = Math.min(totalPages, currentPage + 2);
+      
+      if (start > 1) {
+        pages.push(1);
+        if (start > 2) pages.push('...');
+      }
+      
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+      
+      if (end < totalPages) {
+        if (end < totalPages - 1) pages.push('...');
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
+  };
+
 
   return (
     <div className="bg-white text-gray-800">
@@ -149,17 +230,17 @@ export default function Articles() {
 
           {/* Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredArticles.map((article) => (
+            {currentArticles.map((article) => (
               <article 
                 key={article.id} 
                 className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
                 onClick={() => window.open(`/${currentLocale}/pdf-viewer?url=${encodeURIComponent(article.pdfUrl)}`, '_blank')}
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-96 overflow-hidden">
                   <img 
                     src={article.image} 
                     alt={article.title} 
-                    className="w-full h-full object-cover hover:scale-105 transition duration-500"
+                    className="w-full h-full object-cover object-center hover:scale-105 transition duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -186,23 +267,64 @@ export default function Articles() {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center mt-12">
-            <nav className="flex items-center gap-2">
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-green-950 text-white">
-                1
-              </button>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
-                2
-              </button>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
-                3
-              </button>
-              <span className="px-2">...</span>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
-                8
-              </button>
-            </nav>
-          </div>
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <nav className="flex items-center gap-2">
+                {/* Previous Button */}
+                <button 
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                    currentPage === 1 
+                      ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
+                      : "border border-gray-300 hover:bg-gray-100"
+                  }`}
+                >
+                  {currentLocale === "en" ? "←" : "→"}
+                </button>
+
+                {/* Page Numbers */}
+                {getPageNumbers().map((page, index) => (
+                  <div key={index}>
+                    {page === '...' ? (
+                      <span className="px-2 text-gray-500">...</span>
+                    ) : (
+                      <button 
+                        onClick={() => handlePageChange(page as number)}
+                        className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                          currentPage === page 
+                            ? "bg-green-950 text-white" 
+                            : "border border-gray-300 hover:bg-gray-100"
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    )}
+                  </div>
+                ))}
+
+                {/* Next Button */}
+                <button 
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                    currentPage === totalPages 
+                      ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
+                      : "border border-gray-300 hover:bg-gray-100"
+                  }`}
+                >
+                  {currentLocale === "en" ? "→" : "←"}
+                </button>
+              </nav>
+            </div>
+          )}
+
+          {/* Results Info */}
+          {filteredArticles.length > 0 && (
+            <div className="text-center mt-4 text-gray-600">
+              {t("articles.showing")} {Math.min(endIndex, filteredArticles.length)} {t("articles.of")} {filteredArticles.length} {t("articles.articles")}
+            </div>
+          )}
         </div>
       </section>
 

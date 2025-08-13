@@ -7,18 +7,41 @@
         "environment": "Environmental Topics",
         "innovation": "Eco-Innovation",
         "sustainability": "Sustainability"
-        },
-    "articlesName": {
-        "article1":{
-            "title": "Oil-based Mulching in Iran (National Geographic, November 1979)" ,
-            "excerpt": "The November 1979 issue of National Geographic features Iran’s innovative approach to combating desertification by using oil-based mulch to stabilize migrating sand dunes near Ahvaz. Workers spray petroleum residue from tanks pulled by bulldozers, creating a gray mulch layer that retains moisture and prevents sand movement, enabling vegetation growth.",
-            "categories": "Oil Mulch"
-        }
     },
     "read": "min read",
     "readMore": "Read more",
     "newsletterTitle": "Stay Informed. Stay Engaged.",
     "newsletterSubtitle": "Subscribe to our newsletter for the latest updates on sustainable practices and environmental breakthroughs.",
     "emailPlaceholder": "Enter your email address",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "showing": "Showing",
+    "of": "of",
+    "articles": "articles",
+
+
+    "articlesName": {
+        "article1":{
+            "title": "Oil-based Mulching in Iran (National Geographic, November 1979)" ,
+            "excerpt": "The November 1979 issue of National Geographic examines Iran’s innovative approach to combating desertification, using petroleum mulch to stabilize migrating sand dunes near Ahvaz. In this process, workers use tankers pulled by bulldozers to evenly spray residual oil over the sand surface. This creates a gray, adhesive layer that retains moisture, prevents sand movement, and supports the establishment and growth of vegetation. As part of broader desert control and land protection programs, this technique demonstrates the use of petroleum resources for environmental restoration, blending engineering ingenuity with ecological needs in arid regions.",
+            "date": "1979-11-01",
+            "categories": "Oil Mulch",
+            "readTime": "128"
+        },
+        "article2":{
+            "title": "Short-term effect of oil-mulch on vegetation dynamic" ,
+            "excerpt": "This study examines the short-term effects of oil-mulch on vegetation in arid southwestern Iran, combining ecological surveys with remote sensing. One year after application, vegetation cover, litter, and rangeland condition improved, while bare soil decreased. However, species diversity and evenness declined. Remote sensing (MSAVI) detected a 44.8% vegetation increase between 2017 and 2019. Using oil-mulch with native plantings and grazing control can support rangeland rehabilitation, but biodiversity impacts require monitoring.",
+            "date": "2019-01-01",
+            "categories": "Oil Mulch",
+            "readTime": "60"
+        },
+        "article3": {
+            "title": "Short-term effect of oil-mulch on vegetation dynamic",
+            "excerpt": "This study analyzes the short-term effects of oil-mulch on vegetation in arid southwestern Iran using ecological field data and remote sensing. One year after application, vegetation cover, litter, and rangeland condition improved while bare soil decreased. However, species diversity and evenness declined. MSAVI index from remote sensing showed a 44.8% increase in vegetation cover between 2017 and 2019. Combining oil-mulch with native plantings and grazing control supports rangeland rehabilitation, but biodiversity impacts must be monitored.",
+            "categories": "Oil Mulch",
+            "date": "2021-01-25",
+            "readTime": "35"
+        }
+
+    }
+    
 }
