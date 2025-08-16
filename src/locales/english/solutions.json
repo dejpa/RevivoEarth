@@ -34,6 +34,9 @@
     "description": "We optimize cost-effectiveness by reducing long-term maintenance and improving project efficiency."
   },
   "caseStudiesTitle": "Field Success Stories",
+  "showing": "Showing",
+  "of": "Of",
+  "caseStudies": "Case Studies",
   "caseStudy1": {
     "title": "Post-Mining Land Regeneration",
     "description": "Rehabilitating a former mining site in a desert region through mulch application and erosion prevention techniques.",
@@ -42,6 +45,20 @@
     "result3": "Met sustainability regulations ahead of deadline"
   },
   "caseStudy2": {
+    "title": "Urban Infrastructure Dust Control",
+    "description": "Supplying a clean-air solution for a mega construction site in a dry climate with limited water resources.",
+    "result1": "Air quality maintained within legal limits",
+    "result2": "60% less water consumption than traditional spraying",
+    "result3": "Awarded for environmental responsibility"
+  },
+ "caseStudy3": {
+    "title": "Seed Balls for Combating Desertification",
+    "description": "Applying the Seed Balls technique as a low-cost and effective method to restore vegetation cover in arid and desert regions of Iran.",
+    "result1": "Reduced wind erosion and dust control",
+    "result2": "Enhanced natural vegetation cover and sand dune fixation",
+    "result3": "Community-driven implementation with lower costs"
+  },
+  "caseStudy4": {
     "title": "Urban Infrastructure Dust Control",
     "description": "Supplying a clean-air solution for a mega construction site in a dry climate with limited water resources.",
     "result1": "Air quality maintained within legal limits",

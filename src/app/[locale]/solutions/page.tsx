@@ -4,16 +4,120 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getTranslator } from "@/i18n";
+import { useState } from "react";
 
 const locales = ["en", "ar", "fa"];
 
 export default function OurSolutions() {
   const pathname = usePathname();
+  const [currentPage, setCurrentPage] = useState(1);
+  const caseStudiesPerPage = 2; // Number of case studies to show per page
 
   // Extract current language from path
   const pathSegments = pathname.split("/");
   const currentLocale = locales.includes(pathSegments[1]) ? pathSegments[1] : "en";
   const t = getTranslator(currentLocale);
+
+  // Case studies data - you can add more case studies here
+  const caseStudies = [
+    {
+      id: 1,
+      title: t("solutions.caseStudy1.title"),
+      description: t("solutions.caseStudy1.description"),
+      results: [
+        t("solutions.caseStudy1.result1"),
+        t("solutions.caseStudy1.result2"),
+        t("solutions.caseStudy1.result3")
+      ],
+      image: "/solutions/Post-Mining-regeneration.webp",
+      imageAlt: t("solutions.caseStudy1.title"),
+      order: "normal" // normal or reverse
+    },
+    {
+      id: 2,
+      title: t("solutions.caseStudy2.title"),
+      description: t("solutions.caseStudy2.description"),
+      results: [
+        t("solutions.caseStudy2.result1"),
+        t("solutions.caseStudy2.result2"),
+        t("solutions.caseStudy2.result3")
+      ],
+      image: "/solutions/mulch.webp",
+      imageAlt: t("solutions.caseStudy2.title"),
+      order: "reverse" // normal or reverse
+    },
+    // Add more case studies here as needed
+    {
+      id: 3,
+      title: t("solutions.caseStudy3.title") || "Agricultural Land Restoration",
+      description: t("solutions.caseStudy3.description") || "Comprehensive restoration of degraded agricultural lands using sustainable practices.",
+      results: [
+        t("solutions.caseStudy3.result1") || "Improved soil fertility by 40%",
+        t("solutions.caseStudy3.result2") || "Increased crop yield by 25%",
+        t("solutions.caseStudy3.result3") || "Reduced water consumption by 30%"
+      ],
+      image: "/solutions/Seed Balls.webp",
+      imageAlt: t("solutions.caseStudy3.title"),
+      order: "normal"
+    },
+    {
+      id: 4,
+      title: t("solutions.caseStudy4.title") || "Urban Green Space Development",
+      description: t("solutions.caseStudy4.description") || "Transforming urban areas into sustainable green spaces for community benefit.",
+      results: [
+        t("solutions.caseStudy4.result1") || "Created 5 new community parks",
+        t("solutions.caseStudy4.result2") || "Improved air quality by 35%",
+        t("solutions.caseStudy4.result3") || "Enhanced biodiversity in urban areas"
+      ],
+      image: "/img/urban-green.webp",
+      imageAlt: "Urban Green Space Development",
+      order: "reverse"
+    }
+  ];
+
+  // Calculate pagination
+  const totalPages = Math.ceil(caseStudies.length / caseStudiesPerPage);
+  const startIndex = (currentPage - 1) * caseStudiesPerPage;
+  const endIndex = startIndex + caseStudiesPerPage;
+  const currentCaseStudies = caseStudies.slice(startIndex, endIndex);
+
+  // Handle page navigation
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  // Generate page numbers to display
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages if total is small
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show pages around current page
+      const start = Math.max(1, currentPage - 2);
+      const end = Math.min(totalPages, currentPage + 2);
+      
+      if (start > 1) {
+        pages.push(1);
+        if (start > 2) pages.push('...');
+      }
+      
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+      
+      if (end < totalPages) {
+        if (end < totalPages - 1) pages.push('...');
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
+  };
 
   return (
     <div className="bg-white text-gray-800">
@@ -135,35 +239,87 @@ export default function OurSolutions() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("solutions.caseStudiesTitle")}</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <h3 className="text-xl font-bold text-green-950 mb-4">{t("solutions.caseStudy1.title")}</h3>
-              <p className="text-gray-600 mb-4">{t("solutions.caseStudy1.description")}</p>
-              <ul className="list-inside text-gray-600 space-y-2">
-                <li>✅ {t("solutions.caseStudy1.result1")}</li>
-                <li>✅ {t("solutions.caseStudy1.result2")}</li>
-                <li>✅ {t("solutions.caseStudy1.result3")}</li>
-              </ul>
+          {/* Dynamic Case Studies */}
+          {currentCaseStudies.map((caseStudy, index) => (
+            <div key={caseStudy.id} className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${index < currentCaseStudies.length - 1 ? 'mb-12' : ''}`}>
+              <div className={caseStudy.order === "reverse" ? "md:order-1" : ""}>
+                <h3 className="text-xl font-bold text-green-950 mb-4">{caseStudy.title}</h3>
+                <p className="text-gray-600 mb-4">{caseStudy.description}</p>
+                <ul className="list-inside text-gray-600 space-y-2">
+                  {caseStudy.results.map((result, resultIndex) => (
+                    <li key={resultIndex}>✅ {result}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className={`bg-gray-100 rounded-lg overflow-hidden ${caseStudy.order === "reverse" ? "md:order-2" : ""}`}>
+                <img 
+                  src={caseStudy.image} 
+                  alt={caseStudy.imageAlt} 
+                  className="w-full h-64 object-cover min-h-[300px]"
+                />
+              </div>
             </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden">
-              <img src="/img/Post-Mining-regeneration.webp" alt={t("solutions.caseStudy1.title")} className="w-full h-full object-cover" />
-            </div>
-          </div>
+          ))}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="md:order-1">
-              <h3 className="text-xl font-bold text-green-950 mb-4">{t("solutions.caseStudy2.title")}</h3>
-              <p className="text-gray-600 mb-4">{t("solutions.caseStudy2.description")}</p>
-              <ul className="list-inside text-gray-600 space-y-2">
-                <li>✅ {t("solutions.caseStudy2.result1")}</li>
-                <li>✅ {t("solutions.caseStudy2.result2")}</li>
-                <li>✅ {t("solutions.caseStudy2.result3")}</li>
-              </ul>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <nav className="flex items-center gap-2">
+                {/* Previous Button */}
+                <button 
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                    currentPage === 1 
+                      ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
+                      : "border border-gray-300 hover:bg-gray-100"
+                  }`}
+                >
+                  {currentLocale === "en" ? "←" : "→"}
+                </button>
+
+                {/* Page Numbers */}
+                {getPageNumbers().map((page, index) => (
+                  <div key={index}>
+                    {page === '...' ? (
+                      <span className="px-2 text-gray-500">...</span>
+                    ) : (
+                      <button 
+                        onClick={() => handlePageChange(page as number)}
+                        className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                          currentPage === page 
+                            ? "bg-green-950 text-white" 
+                            : "border border-gray-300 hover:bg-gray-100"
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    )}
+                  </div>
+                ))}
+
+                {/* Next Button */}
+                <button 
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                    currentPage === totalPages 
+                      ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
+                      : "border border-gray-300 hover:bg-gray-100"
+                  }`}
+                >
+                  {currentLocale === "en" ? "→" : "←"}
+                </button>
+              </nav>
             </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden md:order-2">
-              <img src="/img/mulch.webp" alt={t("solutions.caseStudy2.title")} className="w-full h-full object-cover" />
+          )}
+
+          {/* Results Info */}
+          {caseStudies.length > 0 && (
+            <div className="text-center mt-4 text-gray-600">
+              {t("solutions.showing") || "Showing"} {startIndex + 1}-{Math.min(endIndex, caseStudies.length)} {t("solutions.of") || "of"} {caseStudies.length} {t("solutions.caseStudies") || "case studies"}
             </div>
-          </div>
+          )}
         </div>
       </section>
 
