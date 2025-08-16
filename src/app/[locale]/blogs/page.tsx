@@ -28,8 +28,8 @@ export default function Articles() {
       date: t("articles.articlesName.article1.date"),
       category: t("articles.articlesName.article1.categories"),
       categoryKey: "oilMulch",
-      image: "/articles/National Geographic Magazine November 1979.webp",
       readTime: t("articles.articlesName.article1.readTime"),
+      image: "/articles/National Geographic Magazine November 1979.webp",
       pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
     },
     {
@@ -39,8 +39,8 @@ export default function Articles() {
       date: t("articles.articlesName.article2.date"),
       category: t("articles.articlesName.article2.categories"),
       categoryKey: "oilMulch",
-      image: "/articles/Short-term effect of oil-mulch on vegetation dynamic.webp",
       readTime: t("articles.articlesName.article2.readTime"),
+      image: "/articles/Short-term effect of oil-mulch on vegetation dynamic.webp",
       pdfUrl: "/articles/Short-term effect of oil-mulch on vegetation dynamic.pdf"
     },
     {
@@ -50,20 +50,20 @@ export default function Articles() {
       date: t("articles.articlesName.article3.date"),
       category: t("articles.articlesName.article3.categories"),
       categoryKey: "oilMulch",
-      image: "/articles/Petroleum mulch studies for row crops in California.webp",
       readTime: t("articles.articlesName.article3.readTime"),
+      image: "/articles/Petroleum mulch studies for row crops in California.webp",
       pdfUrl: "/articles/Petroleum mulch studies for row crops in California.pdf"
     },
     {
       id: 4,
-      title: t("articles.articlesName.article1.title"),
-      excerpt: t("articles.articlesName.article1.excerpt"),
-      date: "1979-11-01",
-      category: t("articles.articlesName.article1.categories"),
+      title: t("articles.articlesName.article4.title"),
+      excerpt: t("articles.articlesName.article4.excerpt"),
+      date: t("articles.articlesName.article4.date"),
+      category: t("articles.articlesName.article4.categories"),
       categoryKey: "oilMulch",
-      image: "/articles/National Geographic Magazine November 1979.webp",
-      readTime: "20",
-      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
+      readTime: t("articles.articlesName.article3.readTime"),
+      image: "/articles/SandDunesFixation_Fadhil2002.webp",
+      pdfUrl: "/articles/SandDunesFixation_Fadhil2002.pdf"
     },
     {
       id: 5,
@@ -233,7 +233,7 @@ export default function Articles() {
             {currentArticles.map((article) => (
               <article 
                 key={article.id} 
-                className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
+                className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer flex flex-col h-full"
                 onClick={() => window.open(`/${currentLocale}/pdf-viewer?url=${encodeURIComponent(article.pdfUrl)}`, '_blank')}
               >
                 <div className="h-96 overflow-hidden">
@@ -243,14 +243,14 @@ export default function Articles() {
                     className="w-full h-full object-cover object-center hover:scale-105 transition duration-500"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-green-950 font-medium">{article.category}</span>
                     <span className="text-sm text-gray-500">{article.date}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-3">{article.title}</h3>
-                  <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <div className="flex justify-between items-center">
+                  <p className="text-gray-600 mb-4 flex-grow">{article.excerpt}</p>
+                  <div className="flex justify-between items-center mt-auto">
                     <span className="text-sm text-gray-500">{article.readTime} {t("articles.read")}</span>
                     <div className="flex items-center gap-2">
                       <span className="text-green-950 font-medium hover:underline">
