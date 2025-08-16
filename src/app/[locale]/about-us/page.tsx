@@ -86,7 +86,7 @@ export default function AboutUs() {
       </section> */}
 
       {/* تیم ما */}
-      <section className="py-16 bg-gray-50">
+     <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("aboutUs.ourTeam")}</h2>
           <p className="md:text-xl text-gray-600 mb-8">
@@ -107,7 +107,7 @@ export default function AboutUs() {
               <p className="text-gray-600">{t("aboutUs.developmentDescription")}</p>
             </div>
 
-            {/* عضو تیم ۳ */}
+           { /* عضو تیم ۳ */}
             <div className="text-center">
               <img src="/team-member-3.jpeg" alt="Team Member 3" className="w-32 h-32 rounded-full mx-auto mb-4" />
               <h3 className="text-xl font-semibold">{t("aboutUs.ceo")}</h3>
@@ -115,9 +115,9 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
 
-      {/* Call to Action */}
+    
       {/* Call to Action */}
       <section className="py-16 bg-green-950 text-white">
         <div className="container mx-auto px-4 text-center">
