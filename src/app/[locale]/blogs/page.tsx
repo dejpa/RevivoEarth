@@ -27,7 +27,7 @@ export default function Articles() {
       excerpt: t("articles.articlesName.article1.excerpt"),
       date: t("articles.articlesName.article1.date"),
       category: t("articles.articlesName.article1.categories"),
-      categoryKey: "environmentaalTopics",
+      categoryKey: "environment",
       readTime: t("articles.articlesName.article1.readTime"),
       image: "/articles/National Geographic Magazine November 1979.webp",
       pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
