@@ -194,7 +194,7 @@ export default function LearnMorePage() {
     </section>
 
     {/* Back to Home Button */}
-    <div className="text-center py-16">
+    <div className="text-center pb-16">
         <Link 
         href={`/${currentLocale}`}
         className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 space-x-3 space-x-reverse"
