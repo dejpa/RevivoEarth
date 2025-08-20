@@ -122,7 +122,7 @@ export default function OurSolutions() {
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-white">
+      <section className="relative min-h-[60vh] flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/img/solutions.webp')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>

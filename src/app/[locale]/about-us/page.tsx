@@ -20,7 +20,7 @@ export default function AboutUs() {
   return (
     <div className="bg-white text-gray-800">
       {/* hero section  */}
-      <section className="relative min-h-screen flex items-center justify-center text-white">
+      <section className="relative min-h-[60vh] flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/img/about-us.webp')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
@@ -92,28 +92,6 @@ export default function AboutUs() {
           <p className="md:text-xl text-gray-600 mb-8">
             {t("aboutUs.ourTeamDescription")}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* عضو تیم ۱ */}
-            <div className="text-center">
-              <img src="/team-member-1.jpeg" alt="Team Member 1" className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h3 className="text-xl font-semibold">{t("aboutUs.manager")}</h3>
-              <p className="text-gray-600">{t("aboutUs.managerDescription")}</p>
-            </div>
-
-            {/* عضو تیم ۲ */}
-            <div className="text-center">
-              <img src="/team-member-2.jpeg" alt="Team Member 2" className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h3 className="text-xl font-semibold">{t("aboutUs.development")}</h3>
-              <p className="text-gray-600">{t("aboutUs.developmentDescription")}</p>
-            </div>
-
-           { /* عضو تیم ۳ */}
-            <div className="text-center">
-              <img src="/team-member-3.jpeg" alt="Team Member 3" className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h3 className="text-xl font-semibold">{t("aboutUs.ceo")}</h3>
-              <p className="text-gray-600">{t("aboutUs.ceoDescription")}</p>
-            </div>
-          </div>
         </div>
       </section> 
 
