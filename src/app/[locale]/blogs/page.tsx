@@ -27,7 +27,7 @@ export default function Articles() {
       excerpt: t("articles.articlesName.article1.excerpt"),
       date: t("articles.articlesName.article1.date"),
       category: t("articles.articlesName.article1.categories"),
-      categoryKey: "oilMulch",
+      categoryKey: "environmentaalTopics",
       readTime: t("articles.articlesName.article1.readTime"),
       image: "/articles/National Geographic Magazine November 1979.webp",
       pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
@@ -65,39 +65,7 @@ export default function Articles() {
       image: "/articles/SandDunesFixation_Fadhil2002.webp",
       pdfUrl: "/articles/SandDunesFixation_Fadhil2002.pdf"
     },
-    {
-      id: 5,
-      title: t("articles.articlesName.article1.title"),
-      excerpt: t("articles.articlesName.article1.excerpt"),
-      date: "1979-11-01",
-      category: t("articles.articlesName.article1.categories"),
-      categoryKey: "oilMulch",
-      image: "/articles/National Geographic Magazine November 1979.webp",
-      readTime: "20",
-      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
-    },
-    {
-      id: 6,
-      title: t("articles.articlesName.article1.title"),
-      excerpt: t("articles.articlesName.article1.excerpt"),
-      date: "1979-11-01",
-      category: t("articles.articlesName.article1.categories"),
-      categoryKey: "oilMulch",
-      image: "/articles/National Geographic Magazine November 1979.webp",
-      readTime: "20",
-      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
-    },
-    {
-      id: 7,
-      title: t("articles.articlesName.article1.title"),
-      excerpt: t("articles.articlesName.article1.excerpt"),
-      date: "1979-11-01",
-      category: t("articles.articlesName.article1.categories"),
-      categoryKey: "oilMulch",
-      image: "/articles/National Geographic Magazine November 1979.webp",
-      readTime: "20",
-      pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
-    }
+
   ];
 
   // Filter articles based on selected category
@@ -254,7 +222,7 @@ export default function Articles() {
                     <span className="text-sm text-gray-500">{article.readTime} {t("articles.read")}</span>
                     <div className="flex items-center gap-2">
                       <span className="text-green-950 font-medium hover:underline">
-                        {t("articles.readMore")}
+                      {t("articles.readMore")}
                       </span>
                       <svg className="w-4 h-4 text-green-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -268,8 +236,8 @@ export default function Articles() {
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex justify-center mt-12">
-              <nav className="flex items-center gap-2">
+          <div className="flex justify-center mt-12">
+            <nav className="flex items-center gap-2">
                 {/* Previous Button */}
                 <button 
                   onClick={() => handlePageChange(currentPage - 1)}
@@ -281,7 +249,7 @@ export default function Articles() {
                   }`}
                 >
                   {currentLocale === "en" ? "←" : "→"}
-                </button>
+              </button>
 
                 {/* Page Numbers */}
                 {getPageNumbers().map((page, index) => (
@@ -298,7 +266,7 @@ export default function Articles() {
                         }`}
                       >
                         {page}
-                      </button>
+              </button>
                     )}
                   </div>
                 ))}
@@ -314,9 +282,9 @@ export default function Articles() {
                   }`}
                 >
                   {currentLocale === "en" ? "→" : "←"}
-                </button>
-              </nav>
-            </div>
+              </button>
+            </nav>
+          </div>
           )}
 
           {/* Results Info */}
