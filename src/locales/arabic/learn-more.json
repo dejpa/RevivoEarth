@@ -1,0 +1,41 @@
+{
+  "heroTitle": "اعرف المزيد عن RevivoEarth",
+  "heroDescription": "اكتشف حملاتنا ومحتوى الوسائط واتصل بنا على المنصات الاجتماعية",
+  
+  "campaignTitle": "فيديوهات الحملات",
+  "campaignDescription": "شاهد أحدث حملات التوعية البيئية ومشاريع الاستعادة",
+  "videoPlaceholder": "فيديو الحملة قريباً",
+  "videoDescription": "أحدث حملتنا البيئية ستكون متاحة هنا",
+  
+  "mediaTitle": "يوتيوب والبودكاست",
+  "mediaDescription": "استكشف محتوانا التعليمي والمناقشات البيئية",
+  
+  "youtubeTitle": "قناة يوتيوب",
+  "youtubeDescription": "فيديوهات تعليمية حول الحفاظ على البيئة",
+  "latestVideo": "أحدث فيديو",
+  "latestVideoDesc": "تقنيات استعادة البيئة وقصص النجاح",
+  "watchNow": "شاهد الآن",
+  
+  "podcastTitle": "بودكاست Revivo Talk",
+  "podcastDescription": "مناقشات متعمقة حول استعادة النظام البيئي",
+  "latestEpisode": "أحدث حلقة",
+  "latestEpisodeDesc": "رؤى الخبراء حول التحديات البيئية",
+  "listenNow": "استمع الآن",
+  
+  "socialTitle": "تواصل معنا",
+  "socialDescription": "تابعنا على وسائل التواصل الاجتماعي للحصول على آخر التحديثات والنصائح البيئية",
+  
+  "instagramDescription": "نصائح بيئية يومية وتحديثات المشروع",
+  "instagramFollow": "تابع على إنستغرام",
+  
+  "twitterDescription": "أحدث الأخبار والمناقشات البيئية",
+  "twitterFollow": "تابع على تويتر",
+  
+  "linkedinDescription": "شبكة مهنية وفرص وظيفية",
+  "linkedinFollow": "تواصل على لينكد إن",
+  
+  "youtubeSocialDescription": "فيديوهات تعليمية وأفلام وثائقية للمشروع",
+  "youtubeSocialFollow": "اشترك على يوتيوب",
+  
+  "backToHome": "العودة إلى الصفحة الرئيسية"
+}
