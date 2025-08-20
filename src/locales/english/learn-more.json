@@ -1,0 +1,41 @@
+{
+  "heroTitle": "Learn More About RevivoEarth",
+  "heroDescription": "Discover our campaigns, media content, and connect with us on social platforms",
+  
+  "campaignTitle": "Campaign Videos",
+  "campaignDescription": "Watch our latest environmental awareness campaigns and restoration projects",
+  "videoPlaceholder": "Campaign Video Coming Soon",
+  "videoDescription": "Our latest environmental campaign will be available here",
+  
+  "mediaTitle": "YouTube & Podcasts",
+  "mediaDescription": "Explore our educational content and environmental discussions",
+  
+  "youtubeTitle": "YouTube Channel",
+  "youtubeDescription": "Educational videos about environmental conservation",
+  "latestVideo": "Latest Video",
+  "latestVideoDesc": "Environmental restoration techniques and success stories",
+  "watchNow": "Watch Now",
+  
+  "podcastTitle": "Revivo Talk Podcast",
+  "podcastDescription": "In-depth discussions about ecosystem restoration",
+  "latestEpisode": "Latest Episode",
+  "latestEpisodeDesc": "Expert insights on environmental challenges",
+  "listenNow": "Listen Now",
+  
+  "socialTitle": "Connect With Us",
+  "socialDescription": "Follow us on social media for daily updates and environmental tips",
+  
+  "instagramDescription": "Daily environmental tips and project updates",
+  "instagramFollow": "Follow on Instagram",
+  
+  "twitterDescription": "Latest news and environmental discussions",
+  "twitterFollow": "Follow on Twitter",
+  
+  "linkedinDescription": "Professional network and career opportunities",
+  "linkedinFollow": "Connect on LinkedIn",
+  
+  "youtubeSocialDescription": "Educational videos and project documentaries",
+  "youtubeSocialFollow": "Subscribe on YouTube",
+  
+  "backToHome": "Back to Home"
+}
