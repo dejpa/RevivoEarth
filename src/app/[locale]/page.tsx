@@ -32,7 +32,7 @@ export default function Home() {
             {t("home.heroDescription")}
           </p>
           <div className="space-x-4 rtl:space-x-reverse">
-            <Link href="/about-us" className="text-sm md:text-lg bg-zinc-200 text-green-950 px-2 md:px-6 py-3 rounded-lg hover:bg-lime-600 hover:text-white transition duration-300">
+            <Link href={`/${currentLocale}/learn-more`} className="text-sm md:text-lg bg-zinc-200 text-green-950 px-2 md:px-6 py-3 rounded-lg hover:bg-lime-600 hover:text-white transition duration-300">
               {t("home.learnMore")}
             </Link>
             <a href="/contact" className="text-sm md:text-lg bg-transparent border border-white text-white px-2 md:px-6 py-3 rounded-lg hover:bg-white hover:text-green-950 transition duration-300">
