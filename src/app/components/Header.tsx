@@ -141,7 +141,7 @@ export default function Header() {
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+              <div className="absolute inset-y-0 left-1 flex items-center pointer-events-none">
                 <ChevronDownIcon className="h-4 w-4 text-green-950" />
               </div>
             </div>
