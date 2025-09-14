@@ -127,69 +127,75 @@ export default function Articles() {
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/img/articles.webp')" }}>
-          <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ 
+            backgroundImage: "url('/img/articles.webp')",
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
         </div>
-        <div className="container mx-auto text-center relative z-10 px-4">
-          <h1 className="text-2xl md:text-5xl font-bold mb-4">{t("articles.title")}</h1>
-          <p className="md:text-xl max-w-3xl mx-auto">
+        <div className="container mx-auto text-center relative z-10 px-4 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow">{t("articles.title")}</h1>
+          <p className="text-lg md:text-2xl max-w-4xl mx-auto text-shadow">
             {t("articles.subtitle")}
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-white to-emerald-50" data-reveal>
         <div className="container mx-auto px-4">
           {/* Categories Filter */}
-          <div className="flex flex-wrap gap-4 mb-12">
+          <div className="flex flex-wrap gap-4 mb-16 justify-center">
             <button 
               onClick={() => handleCategorySelect("all")}
-              className={`px-4 py-2 rounded-full transition ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover-lift ${
                 selectedCategory === "all" 
-                  ? "bg-green-950 text-white" 
-                  : "border border-gray-300 hover:bg-gray-100"
+                  ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                  : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
               }`}
             >
               {t("articles.allCategories")}
             </button>
             <button 
               onClick={() => handleCategorySelect("oilMulch")}
-              className={`px-4 py-2 rounded-full transition ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover-lift ${
                 selectedCategory === "oilMulch" 
-                  ? "bg-green-950 text-white" 
-                  : "border border-gray-300 hover:bg-gray-100"
+                  ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                  : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
               }`}
             >
               {t("articles.categories.oilMulch")}
             </button>
             <button 
               onClick={() => handleCategorySelect("environment")}
-              className={`px-4 py-2 rounded-full transition ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover-lift ${
                 selectedCategory === "environment" 
-                  ? "bg-green-950 text-white" 
-                  : "border border-gray-300 hover:bg-gray-100"
+                  ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                  : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
               }`}
             >
               {t("articles.categories.environment")}
             </button>
             <button 
               onClick={() => handleCategorySelect("innovation")}
-              className={`px-4 py-2 rounded-full transition ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover-lift ${
                 selectedCategory === "innovation" 
-                  ? "bg-green-950 text-white" 
-                  : "border border-gray-300 hover:bg-gray-100"
+                  ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                  : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
               }`}
             >
               {t("articles.categories.innovation")}
             </button>
             <button 
               onClick={() => handleCategorySelect("sustainability")}
-              className={`px-4 py-2 rounded-full transition ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover-lift ${
                 selectedCategory === "sustainability" 
-                  ? "bg-green-950 text-white" 
-                  : "border border-gray-300 hover:bg-gray-100"
+                  ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                  : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
               }`}
             >
               {t("articles.categories.sustainability")}
@@ -201,33 +207,37 @@ export default function Articles() {
             {currentArticles.map((article) => (
               <article 
                 key={article.id} 
-                className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer flex flex-col h-full"
+                className="card-modern overflow-hidden cursor-pointer hover-lift group"
                 onClick={() => window.open(`/${currentLocale}/pdf-viewer?url=${encodeURIComponent(article.pdfUrl)}`, '_blank')}
+                data-hover
               >
-                <div className="h-96 overflow-hidden">
+                <div className="h-80 overflow-hidden relative">
                   <img 
                     src={article.image} 
                     alt={article.title} 
-                    className="w-full h-full object-cover object-center hover:scale-105 transition duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-green-950 font-medium">{article.category}</span>
-                    <span className="text-sm text-gray-500">{article.date}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-green-600 text-white text-sm font-semibold rounded-full">
+                      {article.category}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{article.title}</h3>
-                  <p className="text-gray-600 mb-4 flex-grow">{article.excerpt}</p>
-                  <div className="flex justify-between items-center mt-auto">
-                    <span className="text-sm text-gray-500">{article.readTime} {t("articles.read")}</span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-green-950 font-medium hover:underline">
+                </div>
+                <div className="p-6 flex flex-col h-full">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-sm text-gray-500">{article.date}</span>
+                    <span className="text-sm text-emerald-600 font-medium">{article.readTime} {t("articles.read")}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-gray-800 group-hover:text-emerald-600 transition-colors duration-300">{article.title}</h3>
+                  <p className="text-gray-600 mb-6 flex-grow leading-relaxed">{article.excerpt}</p>
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="text-emerald-600 font-semibold group-hover:text-emerald-700 transition-colors duration-300">
                       {t("articles.readMore")}
-                      </span>
-                      <svg className="w-4 h-4 text-green-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </div>
+                    </span>
+                    <svg className="w-5 h-5 text-emerald-600 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </div>
                 </div>
               </article>
@@ -236,16 +246,16 @@ export default function Articles() {
 
           {/* Pagination */}
           {totalPages > 1 && (
-          <div className="flex justify-center mt-12">
-            <nav className="flex items-center gap-2">
+          <div className="flex justify-center mt-16">
+            <nav className="flex items-center gap-3">
                 {/* Previous Button */}
                 <button 
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                  className={`w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ${
                     currentPage === 1 
                       ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
-                      : "border border-gray-300 hover:bg-gray-100"
+                      : "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white hover-lift"
                   }`}
                 >
                   {currentLocale === "en" ? "←" : "→"}
@@ -255,14 +265,14 @@ export default function Articles() {
                 {getPageNumbers().map((page, index) => (
                   <div key={index}>
                     {page === '...' ? (
-                      <span className="px-2 text-gray-500">...</span>
+                      <span className="px-3 text-gray-500 text-lg">...</span>
                     ) : (
                       <button 
                         onClick={() => handlePageChange(page as number)}
-                        className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                        className={`w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ${
                           currentPage === page 
-                            ? "bg-green-950 text-white" 
-                            : "border border-gray-300 hover:bg-gray-100"
+                            ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                            : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600 hover-lift"
                         }`}
                       >
                         {page}
@@ -275,10 +285,10 @@ export default function Articles() {
                 <button 
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}
-                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                  className={`w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ${
                     currentPage === totalPages 
                       ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
-                      : "border border-gray-300 hover:bg-gray-100"
+                      : "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white hover-lift"
                   }`}
                 >
                   {currentLocale === "en" ? "→" : "←"}
@@ -289,25 +299,25 @@ export default function Articles() {
 
           {/* Results Info */}
           {filteredArticles.length > 0 && (
-            <div className="text-center mt-4 text-gray-600">
-              {t("articles.showing")} {Math.min(endIndex, filteredArticles.length)} {t("articles.of")} {filteredArticles.length} {t("articles.articles")}
+            <div className="text-center mt-6 text-gray-600 text-lg">
+              {t("articles.showing")} {startIndex + 1}-{Math.min(endIndex, filteredArticles.length)} {t("articles.of")} {filteredArticles.length} {t("articles.articles")}
             </div>
           )}
         </div>
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50" data-reveal>
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">{t("articles.newsletterTitle")}</h2>
-          <p className="text-gray-600 mb-8">{t("articles.newsletterSubtitle")}</p>
-          <div className="flex flex-col md:flex-row gap-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">{t("articles.newsletterTitle")}</h2>
+          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">{t("articles.newsletterSubtitle")}</p>
+          <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
             <input 
               type="email" 
               placeholder={t("articles.emailPlaceholder")}
-              className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-950"
+              className="input-modern flex-grow"
             />
-            <button className="px-6 py-3 bg-green-950 text-white rounded-lg hover:bg-green-900 transition">
+            <button className="btn-modern px-8 py-4 hover-lift">
               {t("articles.subscribe")}
             </button>
           </div>

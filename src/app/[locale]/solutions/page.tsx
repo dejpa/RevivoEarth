@@ -122,140 +122,153 @@ export default function OurSolutions() {
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/img/solutions.webp')" }}>
-          <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ 
+            backgroundImage: "url('/img/solutions.webp')",
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
         </div>
-        <div className="container mx-auto text-center relative z-10 px-4">
-          <h1 className="text-2xl md:text-5xl font-bold mb-4">{t("solutions.ourSolutions")}</h1>
-          <p className="md:text-xl max-w-3xl mx-auto">
+        <div className="container mx-auto text-center relative z-10 px-4 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow">{t("solutions.ourSolutions")}</h1>
+          <p className="text-lg md:text-2xl max-w-4xl mx-auto text-shadow">
             {t("solutions.heroDescription")}
           </p>
         </div>
       </section>
 
       {/* Solutions Overview */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-white to-emerald-50" data-reveal>
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("solutions.overviewTitle")}</h2>
-          <p className="text-gray-600 mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gradient text-center">{t("solutions.overviewTitle")}</h2>
+          <div className="max-w-4xl mx-auto mb-12">
+            <p className="text-lg md:text-xl text-gray-600 text-center leading-relaxed">
             {t("solutions.overviewText")}
           </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Solution 1 */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-950 text-white p-3 rounded-full mx-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-green-950">{t("solutions.solution1.title")}</h3>
+                <h3 className="text-2xl font-bold text-gradient">{t("solutions.solution1.title")}</h3>
               </div>
-              <p className="text-gray-600">{t("solutions.solution1.description")}</p>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.solution1.description")}</p>
             </div>
 
             {/* Solution 2 */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-950 text-white p-3 rounded-full mx-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-green-950">{t("solutions.solution2.title")}</h3>
+                <h3 className="text-2xl font-bold text-gradient">{t("solutions.solution2.title")}</h3>
               </div>
-              <p className="text-gray-600">{t("solutions.solution2.description")}</p>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.solution2.description")}</p>
             </div>
 
             {/* Solution 3 */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-950 text-white p-3 rounded-full mx-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-green-950">{t("solutions.solution3.title")}</h3>
+                <h3 className="text-2xl font-bold text-gradient">{t("solutions.solution3.title")}</h3>
               </div>
-              <p className="text-gray-600">{t("solutions.solution3.description")}</p>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.solution3.description")}</p>
             </div>
 
             {/* Solution 4 */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="bg-green-950 text-white p-3 rounded-full mx-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-green-950">{t("solutions.solution4.title")}</h3>
+                <h3 className="text-2xl font-bold text-gradient">{t("solutions.solution4.title")}</h3>
               </div>
-              <p className="text-gray-600">{t("solutions.solution4.description")}</p>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.solution4.description")}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white" data-reveal>
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("solutions.benefitsTitle")}</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gradient text-center">{t("solutions.benefitsTitle")}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Benefit 1 */}
-            <div className="text-center p-6">
-              <div className="bg-green-950 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">✓</span>
+            <div className="card-modern p-8 text-center hover-lift" data-hover>
+              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">✓</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t("solutions.benefit1.title")}</h3>
-              <p className="text-gray-600">{t("solutions.benefit1.description")}</p>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">{t("solutions.benefit1.title")}</h3>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.benefit1.description")}</p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="text-center p-6">
-              <div className="bg-green-950 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">♻</span>
+            <div className="card-modern p-8 text-center hover-lift" data-hover>
+              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">♻</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t("solutions.benefit2.title")}</h3>
-              <p className="text-gray-600">{t("solutions.benefit2.description")}</p>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">{t("solutions.benefit2.title")}</h3>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.benefit2.description")}</p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="text-center p-6">
-              <div className="bg-green-950 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">$</span>
+            <div className="card-modern p-8 text-center hover-lift" data-hover>
+              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">$</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t("solutions.benefit3.title")}</h3>
-              <p className="text-gray-600">{t("solutions.benefit3.description")}</p>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">{t("solutions.benefit3.title")}</h3>
+              <p className="text-gray-600 leading-relaxed">{t("solutions.benefit3.description")}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Case Studies/Examples */}
-      <section className="py-16">
+      <section className="py-20 bg-white" data-reveal>
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-500">{t("solutions.caseStudiesTitle")}</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gradient text-center">{t("solutions.caseStudiesTitle")}</h2>
           
           {/* Dynamic Case Studies */}
           {currentCaseStudies.map((caseStudy, index) => (
-            <div key={caseStudy.id} className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${index < currentCaseStudies.length - 1 ? 'mb-12' : ''}`}>
-              <div className={caseStudy.order === "reverse" ? "md:order-1" : ""}>
-                <h3 className="text-xl font-bold text-green-950 mb-4">{caseStudy.title}</h3>
-                <p className="text-gray-600 mb-4">{caseStudy.description}</p>
-                <ul className="list-inside text-gray-600 space-y-2">
+            <div key={caseStudy.id} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${index < currentCaseStudies.length - 1 ? 'mb-20' : ''}`} data-reveal>
+              <div className={`${caseStudy.order === "reverse" ? "md:order-1" : ""}`}>
+                <h3 className="text-2xl md:text-3xl font-bold text-gradient mb-6">{caseStudy.title}</h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">{caseStudy.description}</p>
+                <ul className="space-y-3">
                   {caseStudy.results.map((result, resultIndex) => (
-                    <li key={resultIndex}>✅ {result}</li>
+                    <li key={resultIndex} className="flex items-start gap-3">
+                      <span className="w-6 h-6 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                        <span className="text-white text-sm">✓</span>
+                      </span>
+                      <span className="text-gray-600 leading-relaxed">{result}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
-              <div className={`bg-gray-100 rounded-lg overflow-hidden ${caseStudy.order === "reverse" ? "md:order-2" : ""}`}>
+              <div className={`card-modern overflow-hidden ${caseStudy.order === "reverse" ? "md:order-2" : ""}`}>
                 <img 
                   src={caseStudy.image} 
                   alt={caseStudy.imageAlt} 
-                  className="w-full h-64 object-cover min-h-[300px]"
+                  className="w-full h-80 object-cover hover-scale transition-transform duration-300"
                 />
               </div>
             </div>
@@ -263,16 +276,16 @@ export default function OurSolutions() {
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex justify-center mt-12">
-              <nav className="flex items-center gap-2">
+            <div className="flex justify-center mt-16">
+              <nav className="flex items-center gap-3">
                 {/* Previous Button */}
                 <button 
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                  className={`w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ${
                     currentPage === 1 
                       ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
-                      : "border border-gray-300 hover:bg-gray-100"
+                      : "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white hover-lift"
                   }`}
                 >
                   {currentLocale === "en" ? "←" : "→"}
@@ -282,14 +295,14 @@ export default function OurSolutions() {
                 {getPageNumbers().map((page, index) => (
                   <div key={index}>
                     {page === '...' ? (
-                      <span className="px-2 text-gray-500">...</span>
+                      <span className="px-3 text-gray-500 text-lg">...</span>
                     ) : (
                       <button 
                         onClick={() => handlePageChange(page as number)}
-                        className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                        className={`w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ${
                           currentPage === page 
-                            ? "bg-green-950 text-white" 
-                            : "border border-gray-300 hover:bg-gray-100"
+                            ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-lg" 
+                            : "border-2 border-gray-300 text-gray-600 hover:border-emerald-500 hover:text-emerald-600 hover-lift"
                         }`}
                       >
                         {page}
@@ -302,10 +315,10 @@ export default function OurSolutions() {
                 <button 
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}
-                  className={`w-10 h-10 flex items-center justify-center rounded-full transition ${
+                  className={`w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ${
                     currentPage === totalPages 
                       ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
-                      : "border border-gray-300 hover:bg-gray-100"
+                      : "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white hover-lift"
                   }`}
                 >
                   {currentLocale === "en" ? "→" : "←"}
@@ -316,7 +329,7 @@ export default function OurSolutions() {
 
           {/* Results Info */}
           {caseStudies.length > 0 && (
-            <div className="text-center mt-4 text-gray-600">
+            <div className="text-center mt-6 text-gray-600 text-lg">
               {t("solutions.showing") || "Showing"} {startIndex + 1}-{Math.min(endIndex, caseStudies.length)} {t("solutions.of") || "of"} {caseStudies.length} {t("solutions.caseStudies") || "case studies"}
             </div>
           )}
@@ -324,17 +337,17 @@ export default function OurSolutions() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-green-950 text-white">
+      <section className="py-20 bg-gradient-to-br from-green-950 via-emerald-900 to-green-800 text-white" data-reveal>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-shadow">
             {t("home.makeChange")}
           </h2>
-          <p className="md:text-xl mb-8">
+          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-shadow">
             {t("home.contactUsDescription")}
           </p>
           <a
-            href="/contact"
-            className="md:text-xl bg-white text-green-950 px-2 md:px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
+            href={`/${currentLocale}/contact`}
+            className="btn-modern px-8 py-4 text-lg font-semibold hover-lift"
           >
            {t("home.contactUs")}
           </a>

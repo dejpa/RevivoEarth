@@ -2,17 +2,17 @@
   "contactUs": "تماس با ما",
   "address": "آدرس",
   "addressDetails": "نشانی",
-
   "phone": "تلفن",
-  "phoneDetails": "+۹۸",
-
+  "phoneDetails": "+989104516070",
   "email": "ایمیل",
   "emailDetails": "info@RevivoEarth.com",
-
   "quickLinks": "لینک‌های مفید",
-  "privacyPolicy": " حفظ حریم خصوصی",
+  "privacyPolicy": "حفظ حریم خصوصی",
   "aboutUs": "درباره ما",
-
+  "solutions": "راه‌حل‌های ما",
   "followUs": "ما را دنبال کنید",
-   "rights": "کلیه حقوق این وبسایت متعلق به RevivoEarth است."
+  "companyDescription": "پیشرو در ارائه راه‌حل‌های پایدار محیط زیستی برای آینده‌ای سبزتر.",
+  "socialDescription": "برای دریافت آخرین اخبار در مورد راه‌حل‌های محیط زیستی ما را دنبال کنید",
+  "sustainabilityMessage": "متعهد به آینده‌ای پایدار",
+  "rights": "کلیه حقوق این وبسایت متعلق به RevivoEarth است."
 }

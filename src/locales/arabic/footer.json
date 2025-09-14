@@ -2,17 +2,17 @@
   "contactUs": "اتصل بنا",
   "address": "العنوان",
   "addressDetails": "العنوان",
-
   "phone": "الهاتف",
-  "phoneDetails": "+٩٨",
-
+  "phoneDetails": "+98 9104516070",
   "email": "البريد الإلكتروني",
   "emailDetails": "info@RevivoEarth.com",
-
   "quickLinks": "روابط سريعة",
   "privacyPolicy": "سياسة الخصوصية",
   "aboutUs": "من نحن",
-
-  "followUs": "تابعنا", 
+  "solutions": "حلولنا",
+  "followUs": "تابعنا",
+  "companyDescription": "الرائد في تقديم الحلول البيئية المستدامة لمستقبل أكثر خضرة.",
+  "socialDescription": "تابعنا للحصول على آخر التحديثات حول الحلول البيئية",
+  "sustainabilityMessage": "ملتزمون بمستقبل مستدام",
   "rights": "جميع حقوق هذا الموقع تعود إلى RevivoEarth."
 }

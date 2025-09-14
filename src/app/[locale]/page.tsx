@@ -20,78 +20,106 @@ export default function Home() {
     <div className="min-h-screen bg-white">
 
       {/* hero section */}
-      <section className="relative min-h-screen flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('img/cover.webp')" }}>
-          <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{ 
+            backgroundImage: "url('/img/cover.webp')",
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
         </div>
-        <div className="container mx-auto text-center relative z-10">
-          <h1 className="text-2xl md:text-5xl font-bold mb-4">
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6 text-shadow">
             {t("home.heroTitle")}
           </h1>
-          <p className="md:text-xl mb-8">
+          <p className="text-lg md:text-2xl mb-10 max-w-3xl mx-auto text-shadow">
             {t("home.heroDescription")}
           </p>
-          <div className="space-x-4 rtl:space-x-reverse">
-            <Link href={`/${currentLocale}/learn-more`} className="text-sm md:text-lg bg-zinc-200 text-green-950 px-2 md:px-6 py-3 rounded-lg hover:bg-lime-600 hover:text-white transition duration-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link 
+              href={`/${currentLocale}/learn-more`} 
+              className="btn-modern px-8 py-4 text-lg font-semibold hover-lift"
+            >
               {t("home.learnMore")}
             </Link>
-            <a href="/contact" className="text-sm md:text-lg bg-transparent border border-white text-white px-2 md:px-6 py-3 rounded-lg hover:bg-white hover:text-green-950 transition duration-300">
+            <a 
+              href={`/${currentLocale}/contact`} 
+              className="px-8 py-4 text-lg font-semibold bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-green-950 transition-all duration-300 hover-lift"
+            >
               {t("home.getQuote")}
             </a>
+          </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="relative py-16 bg-gray-50">
+      <section className="relative py-20 bg-gradient-to-br from-gray-50 to-emerald-50" data-reveal>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-700">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gradient">
             {t("home.aboutUs")}
           </h2>
-          <p className="md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             {t("home.aboutUsDescription")}
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white" data-reveal>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 text-green-700">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gradient">
             {t("home.mainTitle")}
           </h2>
-          <p className="md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             {t("home.mainDescription")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Vision */}
-            <div className="p-6 bg-white rounded-lg shadow-md">
-              <FaLeaf className="text-green-700 h-8 md:h-12 w-12 mx-auto mb-4" />
-              <h3 className="md:text-xl font-semibold mb-2 text-gray-600">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FaLeaf className="text-white h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
                 {t("home.ourVision")}
               </h3>
-              <p className="text-sm md:text-lg text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 {t("home.ourVisionDescription")}
               </p>
             </div>
 
             {/* Mission */}
-            <div className="p-6 bg-white rounded-lg shadow-md">
-              <FaCheckCircle className="text-green-700 h-8 md:h-12 w-12 mx-auto mb-4" />
-              <h3 className="md:text-xl font-semibold mb-2 text-gray-600">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FaCheckCircle className="text-white h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
                 {t("home.ourMission")}
               </h3>
-              <p className="text-sm md:text-lg text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 {t("home.ourMissionDescription")}
               </p>
             </div>
 
             {/* Values */}
-            <div className="p-6 bg-white rounded-lg shadow-md">
-              <FaShieldAlt className="text-green-700 h-8 md:h-12 w-12 mx-auto mb-4" />
-              <h3 className="md:text-xl font-semibold mb-2 text-gray-600">
+            <div className="card-modern p-8 hover-lift" data-hover>
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FaShieldAlt className="text-white h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
                 {t("home.ourValues")}
               </h3>
-              <p className="text-sm md:text-lg text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 {t("home.ourValuesIntegrityDescription")}
               </p>
             </div>

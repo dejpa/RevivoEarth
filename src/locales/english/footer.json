@@ -2,18 +2,17 @@
   "contactUs": "Contact Us",
   "address": "Address",
   "addressDetails": "Address",
-
-
   "phone": "Phone",
-  "phoneDetails": "+98",
-
+  "phoneDetails": "+98 9104516070",
   "email": "Email",
   "emailDetails": "info@RevivoEarth.com",
-
   "quickLinks": "Quick Links",
   "privacyPolicy": "Privacy Policy",
-  "aboutUs": "AboutUs",
-
+  "aboutUs": "About Us",
+  "solutions": "Our Solutions",
   "followUs": "Follow Us",
+  "companyDescription": "Leading sustainable environmental solutions for a greener future.",
+  "socialDescription": "Follow us for the latest updates on environmental solutions",
+  "sustainabilityMessage": "Committed to a sustainable future",
   "rights": "© 2025 RevivoEarth. All rights reserved."
 }
