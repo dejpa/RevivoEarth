@@ -139,7 +139,12 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center">
                     <FaEnvelope className="text-white h-6 w-6" />
                   </div>
-                  <span className="text-lg text-gray-700 font-medium">{t("contact.email")}</span>
+                  <a 
+                    href={`mailto:${t("contact.email")}`}
+                    className="text-lg text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-medium"
+                  >
+                    {t("contact.email")}
+                  </a>
                 </div>
 
                 <div className="flex items-center space-x-4 rtl:space-x-reverse p-4 bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl hover-lift">
