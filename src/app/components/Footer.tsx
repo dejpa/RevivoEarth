@@ -153,7 +153,7 @@ export default function Footer() {
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-gray-600 text-center md:text-left">
-                            {t("footer.rights")}
+                            {t("footer.rights")} | {t("footer.designedBy")} <a href="https://www.melinaniavarani.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 transition-colors">Melina Niavarani</a>
                         </p>
                         <div className="flex items-center gap-4 text-xs text-gray-500">
                             <span>🌱</span>
