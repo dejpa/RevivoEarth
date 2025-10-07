@@ -4,7 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import { GAListener } from "./ga-listener";
 import LoadingOverlay from "./components/LoadingOverlay";
-import ClientEnhancements from "./components/ClientEnhancements";
 
 // Optimize font loading with display swap and preload
 const geistSans = Geist({ 
@@ -162,7 +161,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* Client-side components */}
         <LoadingOverlay />
-        <ClientEnhancements />
         
         {children}
         {GA_ID && <GAListener />}
