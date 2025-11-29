@@ -23,11 +23,12 @@ const getNavLinks = (t: (key: string) => string, currentLocale: string): NavLink
   { href: `/${currentLocale}/contact`, label: t("header.contact") },
 ];
 
-const NavItem = ({ link, openDropdown, setOpenDropdown, isMobile = false }: {
+const NavItem = ({ link, openDropdown, setOpenDropdown, isMobile = false, onMobileLinkClick }: {
   link: NavLink;
   openDropdown: string | null;
   setOpenDropdown: (value: string | null) => void;
   isMobile?: boolean;
+  onMobileLinkClick?: () => void;
 }) => {
   const isOpen = openDropdown === link.href;
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -46,11 +47,18 @@ const NavItem = ({ link, openDropdown, setOpenDropdown, isMobile = false }: {
     };
   }, [setOpenDropdown]);
 
+  const handleLinkClick = () => {
+    if (isMobile && onMobileLinkClick) {
+      onMobileLinkClick();
+    }
+    setOpenDropdown(isOpen ? null : link.href);
+  };
+
   return (
     <div ref={menuRef} className={`relative ${isMobile ? "w-full" : ""}`}>
       <Link
         href={link.href}
-        onClick={() => setOpenDropdown(isOpen ? null : link.href)}
+        onClick={handleLinkClick}
         className={`flex items-center justify-between w-full font-medium transition-all duration-300 relative group ${
           isMobile 
             ? `py-4 px-5 rounded-2xl hover:bg-black/5 active:bg-black/10 ${
@@ -122,7 +130,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <NavItem key={link.href} link={link} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} />
+              <NavItem key={link.href} link={link} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} onMobileLinkClick={() => setIsMenuOpen(false)} />
             ))}
           </nav>
 
@@ -185,7 +193,7 @@ export default function Header() {
           <div className="container mx-auto px-6 py-8">
             <nav className="flex flex-col space-y-1 mb-8">
               {navLinks.map((link) => (
-                <NavItem key={link.href} link={link} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} isMobile />
+                <NavItem key={link.href} link={link} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} isMobile onMobileLinkClick={() => setIsMenuOpen(false)} />
               ))}
             </nav>
             
