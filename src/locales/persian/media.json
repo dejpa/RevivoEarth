@@ -1,0 +1,25 @@
+{
+  "title": "رسانه",
+  "subtitle": "ریل‌ها، ویدیوها و داستان‌های تصویری ما از میدان را تماشا کنید",
+  "reelsTitle": "ویدیوهای آپارات",
+  "reelsDescription": "آخرین ویدیوهای ما مستقیماً از کانال آپارات — بدون نیاز به آپلود مجدد",
+  "videosTitle": "ویدیوها",
+  "videosDescription": "محتوای آموزشی، کمپین‌ها و برجسته‌های پروژه",
+  "photosTitle": "گالری",
+  "photosDescription": "عکس‌هایی از کارهای احیا و پایداری ما",
+  "emptyReels": "ویدیویی یافت نشد — کانال ما را در آپارات ببینید.",
+  "loadingReels": "در حال بارگذاری ویدیوها از آپارات...",
+  "followAparat": "مشاهده کانال در آپارات",
+  "aparatUrl": "https://www.aparat.com/revivoearth",
+  "emptyVideos": "ویدیوها به زودی — برای به‌روز ماندن در یوتیوب مشترک شوید.",
+  "emptyPhotos": "عکس‌های گالری به زودی.",
+  "followInstagram": "دنبال کردن در اینستاگرام",
+  "subscribeYoutube": "اشتراک در یوتیوب",
+  "instagramUrl": "https://instagram.com/revivoearth",
+  "youtubeUrl": "https://youtube.com/@revivoearth",
+  "items": {
+    "reel1": { "title": "عنوان ریل", "description": "توضیحات ریل" },
+    "video1": { "title": "عنوان ویدیو", "description": "توضیحات ویدیو" },
+    "photo1": { "title": "عنوان عکس", "description": "توضیحات عکس" }
+  }
+}

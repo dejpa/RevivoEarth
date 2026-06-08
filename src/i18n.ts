@@ -8,6 +8,7 @@ import solutions_en from "@/locales/english/solutions.json"
 import articles_en from "@/locales/english/blog.json"
 import contact_en from "@/locales/english/contact.json"
 import learnMore_en from "@/locales/english/learn-more.json"
+import media_en from "@/locales/english/media.json"
 
 import home_fa from "@/locales/persian/home.json";
 import header_fa from "@/locales/persian/header.json";
@@ -17,6 +18,7 @@ import solutions_fa from "@/locales/persian/solutions.json";
 import articles_fa from "@/locales/persian/blog.json";
 import contact_fa from "@/locales/persian/contact.json";
 import learnMore_fa from "@/locales/persian/learn-more.json";
+import media_fa from "@/locales/persian/media.json";
 
 import home_ar from "@/locales/arabic/home.json";
 import header_ar from "@/locales/arabic/header.json";
@@ -26,6 +28,7 @@ import solutions_ar from "@/locales/arabic/solutions.json";
 import articles_ar from "@/locales/arabic/blog.json";
 import contact_ar from "@/locales/arabic/contact.json";
 import learnMore_ar from "@/locales/arabic/learn-more.json";
+import media_ar from "@/locales/arabic/media.json";
 
 // تعریف زبان پیش‌فرض
 const DEFAULT_LOCALE = "en";
@@ -40,6 +43,7 @@ const translations: Partial<Record<string, any>> = {
     articles: articles_en,
     contact: contact_en,
     learnMore: learnMore_en,
+    media: media_en,
   },
   fa: {
     header: header_fa,
@@ -50,6 +54,7 @@ const translations: Partial<Record<string, any>> = {
     articles: articles_fa,
     contact: contact_fa,
     learnMore: learnMore_fa,
+    media: media_fa,
   },
   ar: {
     header: header_ar,
@@ -60,6 +65,7 @@ const translations: Partial<Record<string, any>> = {
     articles: articles_ar,
     contact: contact_ar,
     learnMore: learnMore_ar,
+    media: media_ar,
   }
 };
 

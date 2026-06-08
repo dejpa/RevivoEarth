@@ -1,0 +1,25 @@
+{
+  "title": "الوسائط",
+  "subtitle": "شاهد مقاطعنا القصيرة والفيديوهات والقصص المرئية من الميدان",
+  "reelsTitle": "فيديوهات آپارات",
+  "reelsDescription": "أحدث فيديوهاتنا مباشرة من قناتنا على آپارات — دون الحاجة لإعادة الرفع",
+  "videosTitle": "الفيديوهات",
+  "videosDescription": "محتوى تعليمي وحملات وأبرز لحظات المشاريع",
+  "photosTitle": "المعرض",
+  "photosDescription": "صور من أعمال الاستعادة والاستدامة لدينا",
+  "emptyReels": "لم يتم العثور على فيديوهات — زُر قناتنا على آپارات.",
+  "loadingReels": "جاري تحميل الفيديوهات من آپارات...",
+  "followAparat": "عرض القناة على آپارات",
+  "aparatUrl": "https://www.aparat.com/revivoearth",
+  "emptyVideos": "الفيديوهات قريباً — اشترك على يوتيوب للبقاء على اطلاع.",
+  "emptyPhotos": "صور المعرض قريباً.",
+  "followInstagram": "تابع على إنستغرام",
+  "subscribeYoutube": "اشترك على يوتيوب",
+  "instagramUrl": "https://instagram.com/revivoearth",
+  "youtubeUrl": "https://youtube.com/@revivoearth",
+  "items": {
+    "reel1": { "title": "عنوان المقطع", "description": "وصف المقطع" },
+    "video1": { "title": "عنوان الفيديو", "description": "وصف الفيديو" },
+    "photo1": { "title": "عنوان الصورة", "description": "وصف الصورة" }
+  }
+}

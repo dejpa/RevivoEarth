@@ -1,0 +1,25 @@
+{
+  "title": "Media",
+  "subtitle": "Watch our reels, videos, and visual stories from the field",
+  "reelsTitle": "Aparat Videos",
+  "reelsDescription": "Our latest videos streamed directly from our Aparat channel — no re-upload needed",
+  "videosTitle": "Videos",
+  "videosDescription": "Educational content, campaigns, and project highlights",
+  "photosTitle": "Gallery",
+  "photosDescription": "Photos from our restoration and sustainability work",
+  "emptyReels": "No videos found — visit our Aparat channel.",
+  "loadingReels": "Loading videos from Aparat...",
+  "followAparat": "View channel on Aparat",
+  "aparatUrl": "https://www.aparat.com/revivoearth",
+  "emptyVideos": "Videos coming soon — subscribe on YouTube to stay updated.",
+  "emptyPhotos": "Gallery photos coming soon.",
+  "followInstagram": "Follow on Instagram",
+  "subscribeYoutube": "Subscribe on YouTube",
+  "instagramUrl": "https://instagram.com/revivoearth",
+  "youtubeUrl": "https://youtube.com/@revivoearth",
+  "items": {
+    "reel1": { "title": "Reel title", "description": "Reel description" },
+    "video1": { "title": "Video title", "description": "Video description" },
+    "photo1": { "title": "Photo title", "description": "Photo description" }
+  }
+}
