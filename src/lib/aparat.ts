@@ -7,7 +7,20 @@ export type AparatVideo = {
   uploadDate?: string;
 };
 
-const APARAT_USERNAME = process.env.APARAT_USERNAME || "YOUR_APARAT_USERNAME";
+export const APARAT_USERNAME =
+  process.env.APARAT_USERNAME || "revivoearth";
+
+type AparatApiItem = {
+  uid?: string;
+  id?: string | number;
+  hash?: string;
+  title?: string;
+  description?: string;
+  small_poster?: string;
+  big_poster?: string;
+  frame?: string;
+  create_date?: string;
+};
 
 export async function getAparatVideos(): Promise<AparatVideo[]> {
   try {
@@ -21,25 +34,38 @@ export async function getAparatVideos(): Promise<AparatVideo[]> {
     );
 
     if (!res.ok) {
+      console.error("Aparat API failed:", res.status, res.statusText);
       return [];
     }
 
     const data = await res.json();
-    const items = data.videobyuser || [];
 
-    return items.map((item: any) => {
-      const uid = item.uid || item.id || item.hash;
+    const items: AparatApiItem[] =
+      data.videobyuser ||
+      data.videos ||
+      data.data ||
+      [];
 
-      return {
-        uid,
-        title: item.title || "RevivoEarth Media",
-        description: item.description || "",
-        thumbnail: item.small_poster || item.big_poster || item.frame || "",
-        uploadDate: item.create_date || "",
-        embedUrl: `https://www.aparat.com/video/video/embed/videohash/${uid}/vt/frame`,
-      };
-    });
-  } catch {
+    return items
+      .map((item) => {
+        const videoHash = item.hash || item.uid || String(item.id || "");
+
+        if (!videoHash) {
+          return null;
+        }
+
+        return {
+          uid: videoHash,
+          title: item.title || "RevivoEarth Media",
+          description: item.description || "",
+          thumbnail: item.small_poster || item.big_poster || item.frame || "",
+          uploadDate: item.create_date || "",
+          embedUrl: `https://www.aparat.com/video/video/embed/videohash/${videoHash}/vt/frame`,
+        };
+      })
+      .filter(Boolean) as AparatVideo[];
+  } catch (error) {
+    console.error("Aparat fetch error:", error);
     return [];
   }
 }
