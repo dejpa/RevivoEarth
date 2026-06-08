@@ -201,7 +201,7 @@ export default async function MediaPage({ params }: PageProps) {
             emptyMessage={t("media.emptyReels")}
             followText={t("media.followAparat")}
             aparatUrl={t("media.aparatUrl")}
-            defaultDescription={t("media.defaultVideoDescription")}
+            defaultDescription=""
           />
         </div>
       </section>
