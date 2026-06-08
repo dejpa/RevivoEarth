@@ -7,12 +7,12 @@ export type AparatVideo = {
   uploadDate?: string;
 };
 
-const APARAT_USERNAME = process.env.APARAT_USERNAME || "YOUR_APARAT_USERNAME";
+export const APARAT_CHANNEL_USERNAME = process.env.APARAT_USERNAME || "YOUR_APARAT_USERNAME";
 
-export async function getAparatVideos(): Promise<AparatVideo[]> {
+export async function fetchAparatVideos(username: string): Promise<AparatVideo[]> {
   try {
     const res = await fetch(
-      `https://www.aparat.com/etc/api/videoByUser/username/${APARAT_USERNAME}`,
+      `https://www.aparat.com/etc/api/videoByUser/username/${username}`,
       {
         next: {
           revalidate: 3600,
@@ -20,9 +20,7 @@ export async function getAparatVideos(): Promise<AparatVideo[]> {
       }
     );
 
-    if (!res.ok) {
-      return [];
-    }
+    if (!res.ok) return [];
 
     const data = await res.json();
     const items = data.videobyuser || [];
@@ -43,3 +41,8 @@ export async function getAparatVideos(): Promise<AparatVideo[]> {
     return [];
   }
 }
+
+export async function getAparatVideos(): Promise<AparatVideo[]> {
+  return fetchAparatVideos(APARAT_CHANNEL_USERNAME);
+}
+
