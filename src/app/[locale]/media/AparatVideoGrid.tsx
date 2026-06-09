@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { AparatVideo } from "@/lib/aparat";
+import type { AparatVideo, AparatApiItem } from "@/lib/aparat";
 
 function EmptyState({ message }: { message: string }) {
   return (
@@ -28,17 +28,49 @@ function EmptyState({ message }: { message: string }) {
   );
 }
 
+function stripHtml(value: string) {
+  return value.replace(/<[^>]*>/g, "").trim();
+}
+
+function getAparatItems(data: any): AparatApiItem[] {
+  if (Array.isArray(data?.videobyuser)) return data.videobyuser;
+  if (Array.isArray(data?.videos)) return data.videos;
+  if (Array.isArray(data?.data)) return data.data;
+  if (Array.isArray(data?.videobyuser?.videos)) {
+    return data.videobyuser.videos;
+  }
+
+  return [];
+}
+
+function mapAparatVideos(items: AparatApiItem[]): AparatVideo[] {
+  return items
+    .map((item) => {
+      const videoHash = item.hash || item.uid || String(item.id || "");
+
+      if (!videoHash) return null;
+
+      return {
+        uid: videoHash,
+        title: item.title || "RevivoEarth Media",
+        description: item.description ? stripHtml(item.description) : "",
+        thumbnail: item.small_poster || item.big_poster || item.frame || "",
+        uploadDate: item.create_date || "",
+        embedUrl: `https://www.aparat.com/video/video/embed/videohash/${videoHash}/vt/frame`,
+      };
+    })
+    .filter(Boolean) as AparatVideo[];
+}
+
 export default function AparatVideoGrid({
   emptyMessage,
   followText,
   aparatUrl,
-  defaultDescription,
   loadingText,
 }: {
   emptyMessage: string;
   followText: string;
   aparatUrl: string;
-  defaultDescription: string;
   loadingText: string;
 }) {
   const [videos, setVideos] = useState<AparatVideo[]>([]);
@@ -47,26 +79,56 @@ export default function AparatVideoGrid({
   useEffect(() => {
     let active = true;
 
+    async function loadFromInternalApi() {
+      const res = await fetch("/api/aparat", {
+        cache: "no-store",
+      });
+
+      if (!res.ok) return [];
+
+      const data = await res.json();
+
+      return Array.isArray(data.videos) ? data.videos : [];
+    }
+
+    async function loadDirectlyFromAparat() {
+      const username =
+        process.env.NEXT_PUBLIC_APARAT_USERNAME || "revivoearth";
+
+      const res = await fetch(
+        `https://www.aparat.com/etc/api/videoByUser/username/${username}`,
+        {
+          cache: "no-store",
+        }
+      );
+
+      if (!res.ok) return [];
+
+      const data = await res.json();
+      const items = getAparatItems(data);
+
+      return mapAparatVideos(items);
+    }
+
     async function loadVideos() {
       try {
-        const res = await fetch("/api/aparat", {
-          cache: "no-store",
-        });
+        let loadedVideos = await loadFromInternalApi();
 
-        if (!res.ok) {
-          if (active) setVideos([]);
-          return;
+        if (loadedVideos.length === 0) {
+          loadedVideos = await loadDirectlyFromAparat();
         }
-
-        const data = await res.json();
 
         if (active) {
-          setVideos(Array.isArray(data.videos) ? data.videos : []);
+          setVideos(loadedVideos);
         }
       } catch {
-        if (active) setVideos([]);
+        if (active) {
+          setVideos([]);
+        }
       } finally {
-        if (active) setLoading(false);
+        if (active) {
+          setLoading(false);
+        }
       }
     }
 
@@ -116,7 +178,7 @@ export default function AparatVideoGrid({
             <iframe
               src={video.embedUrl}
               className="w-full h-full border-0"
-              allow="fullscreen; encrypted-media; picture-in-picture"
+              allow="encrypted-media; picture-in-picture"
               allowFullScreen
               loading="lazy"
               title={video.title}
@@ -124,13 +186,9 @@ export default function AparatVideoGrid({
           </div>
 
           <div className="p-5">
-            <h3 className="text-lg font-semibold text-gray-800 line-clamp-2 mb-2">
+            <h3 className="text-lg font-semibold text-gray-800 line-clamp-2">
               {video.title}
             </h3>
-
-            <p className="text-gray-600 line-clamp-3">
-              {video.description || defaultDescription}
-            </p>
           </div>
         </article>
       ))}

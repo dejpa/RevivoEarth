@@ -75,7 +75,7 @@ function SectionHeader({
   description,
 }: {
   title: string;
-  description: string;
+  description?: string;
 }) {
   return (
     <div className="text-center mb-12">
@@ -83,7 +83,11 @@ function SectionHeader({
         {title}
       </h2>
 
-      <p className="text-lg text-gray-600 max-w-2xl mx-auto">{description}</p>
+      {description && (
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          {description}
+        </p>
+      )}
     </div>
   );
 }
@@ -175,16 +179,12 @@ export default async function MediaPage({ params }: PageProps) {
         data-reveal
       >
         <div className="container mx-auto px-4">
-          <SectionHeader
-            title={t("media.reelsTitle")}
-            description={t("media.reelsDescription")}
-          />
+          <SectionHeader title={t("media.reelsTitle")} />
 
           <AparatVideoGrid
             emptyMessage={t("media.emptyReels")}
             followText={t("media.followAparat")}
             aparatUrl={t("media.aparatUrl")}
-            defaultDescription={t("media.defaultVideoDescription")}
             loadingText={t("media.loadingReels")}
           />
         </div>
