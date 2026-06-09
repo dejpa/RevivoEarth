@@ -7,6 +7,8 @@ import { getAparatVideos } from "@/lib/aparat";
 import type { AparatVideo } from "@/lib/aparat";
 import AparatVideoGrid from "./AparatVideoGrid";
 
+export const revalidate = 1800;
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://revivoearth.com";
 
 const locales = ["en", "ar", "fa"] as const;
@@ -18,7 +20,9 @@ type PageProps = {
   }>;
 };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
@@ -80,6 +84,7 @@ function SectionHeader({
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         {title}
       </h2>
+
       <p className="text-lg text-gray-600 max-w-2xl mx-auto">
         {description}
       </p>
@@ -127,6 +132,7 @@ function buildMediaSchema({
           thumbnailUrl: video.thumbnail ? [video.thumbnail] : undefined,
           uploadDate: video.uploadDate || undefined,
           embedUrl: video.embedUrl,
+          url: video.aparatUrl || undefined,
           publisher: {
             "@type": "Organization",
             name: "RevivoEarth",
@@ -176,6 +182,7 @@ export default async function MediaPage({ params }: PageProps) {
             sizes="100vw"
             className="object-cover object-center"
           />
+
           <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
         </div>
 
@@ -183,13 +190,17 @@ export default async function MediaPage({ params }: PageProps) {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow">
             {t("media.title")}
           </h1>
+
           <p className="text-lg md:text-2xl max-w-4xl mx-auto text-shadow">
             {t("media.subtitle")}
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-white to-emerald-50" data-reveal>
+      <section
+        className="py-20 bg-gradient-to-br from-white to-emerald-50"
+        data-reveal
+      >
         <div className="container mx-auto px-4">
           <SectionHeader
             title={t("media.reelsTitle")}
@@ -201,7 +212,7 @@ export default async function MediaPage({ params }: PageProps) {
             emptyMessage={t("media.emptyReels")}
             followText={t("media.followAparat")}
             aparatUrl={t("media.aparatUrl")}
-            defaultDescription=""
+            defaultDescription={t("media.defaultVideoDescription")}
           />
         </div>
       </section>
@@ -216,7 +227,10 @@ export default async function MediaPage({ params }: PageProps) {
           {videos.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {videos.map((video) => (
-                <article key={video.id} className="card-modern overflow-hidden hover-lift">
+                <article
+                  key={video.id}
+                  className="card-modern overflow-hidden hover-lift"
+                >
                   <div className="aspect-video bg-gray-100">
                     <iframe
                       src={getYouTubeEmbedUrl(video.youtubeId)}
@@ -245,6 +259,7 @@ export default async function MediaPage({ params }: PageProps) {
           ) : (
             <div className="space-y-6">
               <EmptyState message={t("media.emptyVideos")} />
+
               <div className="text-center">
                 <a
                   href={t("media.youtubeUrl")}
@@ -261,7 +276,10 @@ export default async function MediaPage({ params }: PageProps) {
       </section>
 
       {photos.length > 0 && (
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50" data-reveal>
+        <section
+          className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50"
+          data-reveal
+        >
           <div className="container mx-auto px-4">
             <SectionHeader
               title={t("media.photosTitle")}
@@ -270,7 +288,10 @@ export default async function MediaPage({ params }: PageProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {photos.map((photo) => (
-                <article key={photo.id} className="card-modern overflow-hidden hover-lift group">
+                <article
+                  key={photo.id}
+                  className="card-modern overflow-hidden hover-lift group"
+                >
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <Image
                       src={photo.src}

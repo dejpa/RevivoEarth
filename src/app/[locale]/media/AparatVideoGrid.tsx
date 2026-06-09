@@ -19,6 +19,7 @@ function EmptyState({ message }: { message: string }) {
           />
         </svg>
       </div>
+
       <p className="text-gray-600 text-lg">{message}</p>
     </div>
   );
@@ -41,6 +42,7 @@ export default function AparatVideoGrid({
     return (
       <div className="space-y-6">
         <EmptyState message={emptyMessage} />
+
         <div className="text-center">
           <a
             href={aparatUrl}
@@ -58,11 +60,15 @@ export default function AparatVideoGrid({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
       {videos.map((video) => (
-        <article key={video.uid} className="card-modern overflow-hidden hover-lift">
+        <article
+          key={video.uid}
+          className="card-modern overflow-hidden hover-lift"
+        >
           <div className="aspect-video bg-gray-100">
             <iframe
               src={video.embedUrl}
               className="w-full h-full border-0"
+              allow="fullscreen; encrypted-media; picture-in-picture"
               allowFullScreen
               loading="lazy"
               title={video.title}
@@ -77,6 +83,17 @@ export default function AparatVideoGrid({
             <p className="text-gray-600 line-clamp-3">
               {video.description || defaultDescription}
             </p>
+
+            {video.aparatUrl && (
+              <a
+                href={video.aparatUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-emerald-700 font-semibold hover:text-emerald-900 transition-colors"
+              >
+                Watch on Aparat
+              </a>
+            )}
           </div>
         </article>
       ))}

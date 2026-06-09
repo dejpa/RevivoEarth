@@ -1,4 +1,5 @@
 export type AparatVideo = {
+  aparatUrl: string | undefined;
   uid: string;
   title: string;
   embedUrl: string;
@@ -28,7 +29,11 @@ export async function getAparatVideos(): Promise<AparatVideo[]> {
       `https://www.aparat.com/etc/api/videoByUser/username/${APARAT_USERNAME}`,
       {
         next: {
-          revalidate: 3600,
+          revalidate: 1800,
+        },
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "RevivoEarthBot/1.0",
         },
       }
     );
@@ -46,7 +51,7 @@ export async function getAparatVideos(): Promise<AparatVideo[]> {
       data.data ||
       [];
 
-    return items
+    const videos = items
       .map((item) => {
         const videoHash = item.hash || item.uid || String(item.id || "");
 
@@ -64,6 +69,8 @@ export async function getAparatVideos(): Promise<AparatVideo[]> {
         };
       })
       .filter(Boolean) as AparatVideo[];
+
+    return videos;
   } catch (error) {
     console.error("Aparat fetch error:", error);
     return [];
