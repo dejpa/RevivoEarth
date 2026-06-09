@@ -4,6 +4,7 @@ import {
   APARAT_USERNAME,
   getAparatVideos,
 } from "@/lib/aparat";
+import { aparatFallbackVideos } from "@/data/aparatFallbackVideos";
 
 export const dynamic = "force-dynamic";
 
@@ -48,6 +49,7 @@ export async function GET(request: Request) {
         topLevelKeys: parsed ? Object.keys(parsed) : [],
         rawItemsLength: Array.isArray(rawItems) ? rawItems.length : 0,
         firstRawItem: Array.isArray(rawItems) ? rawItems[0] || null : null,
+        fallbackCount: aparatFallbackVideos.length,
         bodyPreview: text.slice(0, 1000),
       });
     } catch (error) {
@@ -56,6 +58,7 @@ export async function GET(request: Request) {
           username: APARAT_USERNAME,
           apiUrl: APARAT_API_URL,
           error: error instanceof Error ? error.message : "Unknown error",
+          fallbackCount: aparatFallbackVideos.length,
         },
         { status: 200 }
       );
@@ -63,10 +66,12 @@ export async function GET(request: Request) {
   }
 
   const videos = await getAparatVideos();
+  const finalVideos = videos.length > 0 ? videos : aparatFallbackVideos;
 
   return NextResponse.json({
     username: APARAT_USERNAME,
-    count: videos.length,
-    videos,
+    source: videos.length > 0 ? "aparat-api" : "fallback",
+    count: finalVideos.length,
+    videos: finalVideos,
   });
 }
