@@ -3,11 +3,9 @@ import Image from "next/image";
 import Script from "next/script";
 import { getTranslator } from "@/i18n";
 import { videos, photos, getYouTubeEmbedUrl } from "@/data/media";
-import { getAparatVideos } from "@/lib/aparat";
-import type { AparatVideo } from "@/lib/aparat";
 import AparatVideoGrid from "./AparatVideoGrid";
 
-export const revalidate = 1800;
+export const dynamic = "force-dynamic";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://revivoearth.com";
 
@@ -85,9 +83,7 @@ function SectionHeader({
         {title}
       </h2>
 
-      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        {description}
-      </p>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">{description}</p>
     </div>
   );
 }
@@ -100,13 +96,7 @@ function EmptyState({ message }: { message: string }) {
   );
 }
 
-function buildMediaSchema({
-  locale,
-  aparatVideos,
-}: {
-  locale: Locale;
-  aparatVideos: AparatVideo[];
-}) {
+function buildMediaSchema(locale: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -118,31 +108,16 @@ function buildMediaSchema({
           : "RevivoEarth Environmental Media & Videos",
     url: `${siteUrl}/${locale}/media`,
     inLanguage: locale,
-    mainEntity: {
-      "@type": "ItemList",
-      itemListElement: aparatVideos.slice(0, 10).map((video, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "VideoObject",
-          name: video.title,
-          description:
-            video.description ||
-            "RevivoEarth educational video about environmental awareness, ecosystem restoration, land rehabilitation, and soil recovery.",
-          thumbnailUrl: video.thumbnail ? [video.thumbnail] : undefined,
-          uploadDate: video.uploadDate || undefined,
-          embedUrl: video.embedUrl,
-          url: video.aparatUrl || undefined,
-          publisher: {
-            "@type": "Organization",
-            name: "RevivoEarth",
-            logo: {
-              "@type": "ImageObject",
-              url: `${siteUrl}/logo.png`,
-            },
-          },
-        },
-      })),
+    description:
+      locale === "fa"
+        ? "ویدئوها و محتوای رسانه‌ای RevivoEarth درباره آگاهی محیط‌زیستی و احیای زمین."
+        : locale === "ar"
+          ? "محتوى RevivoEarth الإعلامي حول الوعي البيئي واستعادة الأراضي."
+          : "RevivoEarth media content about environmental awareness and land restoration.",
+    publisher: {
+      "@type": "Organization",
+      name: "RevivoEarth",
+      url: siteUrl,
     },
   };
 }
@@ -151,15 +126,13 @@ export default async function MediaPage({ params }: PageProps) {
   const { locale } = await params;
   const t = getTranslator(locale);
 
-  const aparatVideos = await getAparatVideos();
-
   const getItemTitle = (titleKey: string) =>
     t(`media.items.${titleKey}.title`) || titleKey;
 
   const getItemDescription = (titleKey: string) =>
     t(`media.items.${titleKey}.description`) || "";
 
-  const mediaSchema = buildMediaSchema({ locale, aparatVideos });
+  const mediaSchema = buildMediaSchema(locale);
 
   return (
     <main id="main-content" className="bg-white text-gray-800">
@@ -208,11 +181,11 @@ export default async function MediaPage({ params }: PageProps) {
           />
 
           <AparatVideoGrid
-            videos={aparatVideos}
             emptyMessage={t("media.emptyReels")}
             followText={t("media.followAparat")}
             aparatUrl={t("media.aparatUrl")}
             defaultDescription={t("media.defaultVideoDescription")}
+            loadingText={t("media.loadingReels")}
           />
         </div>
       </section>

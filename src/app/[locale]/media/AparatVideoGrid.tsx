@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import type { AparatVideo } from "@/lib/aparat";
 
 function EmptyState({ message }: { message: string }) {
@@ -26,18 +29,63 @@ function EmptyState({ message }: { message: string }) {
 }
 
 export default function AparatVideoGrid({
-  videos,
   emptyMessage,
   followText,
   aparatUrl,
   defaultDescription,
+  loadingText,
 }: {
-  videos: AparatVideo[];
   emptyMessage: string;
   followText: string;
   aparatUrl: string;
   defaultDescription: string;
+  loadingText: string;
 }) {
+  const [videos, setVideos] = useState<AparatVideo[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadVideos() {
+      try {
+        const res = await fetch("/api/aparat", {
+          cache: "no-store",
+        });
+
+        if (!res.ok) {
+          if (active) setVideos([]);
+          return;
+        }
+
+        const data = await res.json();
+
+        if (active) {
+          setVideos(Array.isArray(data.videos) ? data.videos : []);
+        }
+      } catch {
+        if (active) setVideos([]);
+      } finally {
+        if (active) setLoading(false);
+      }
+    }
+
+    loadVideos();
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center py-12">
+        <div className="inline-block w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mb-4" />
+        <p className="text-gray-600">{loadingText}</p>
+      </div>
+    );
+  }
+
   if (videos.length === 0) {
     return (
       <div className="space-y-6">
@@ -83,17 +131,6 @@ export default function AparatVideoGrid({
             <p className="text-gray-600 line-clamp-3">
               {video.description || defaultDescription}
             </p>
-
-            {video.aparatUrl && (
-              <a
-                href={video.aparatUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-emerald-700 font-semibold hover:text-emerald-900 transition-colors"
-              >
-                Watch on Aparat
-              </a>
-            )}
           </div>
         </article>
       ))}
