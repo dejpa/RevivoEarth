@@ -27,7 +27,7 @@ export default function Articles() {
       excerpt: t("articles.articlesName.article1.excerpt"),
       date: t("articles.articlesName.article1.date"),
       category: t("articles.articlesName.article1.categories"),
-      categoryKey: "environment",
+      categoryKey: "oilMulch",
       readTime: t("articles.articlesName.article1.readTime"),
       image: "/articles/National Geographic Magazine November 1979.webp",
       pdfUrl: "/articles/National Geographic Magazine November 1979.pdf"
@@ -210,7 +210,7 @@ export default function Articles() {
                 onClick={() => window.open(`/${currentLocale}/pdf-viewer?url=${encodeURIComponent(article.pdfUrl)}`, '_blank')}
                 data-hover
               >
-                <div className="h-80 overflow-hidden relative">
+                <div className="aspect-[3/2] overflow-hidden relative">
                   <img 
                     src={article.image} 
                     alt={article.title} 
