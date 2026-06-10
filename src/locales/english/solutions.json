@@ -1,71 +1,73 @@
 {
   "solutions": "Solutions",
-  "ourSolutions": "Our Solutions",
-  "heroDescription": "Nature-based and science-driven innovations to restore ecosystems and combat land degradation.",
-  "overviewTitle": "Tailored Environmental Solutions for a Healthier Planet",
-  "overviewText": "RevivoEarth develops and delivers sustainable solutions that address land degradation, dust pollution, and ecological imbalance through scientifically validated, scalable approaches.",
+  "ourSolutions": "Areas of Solutions",
+  "heroDescription": "Science-based, nature-oriented, and participation-driven approaches to understanding environmental challenges and supporting land and ecosystem restoration.",
+  "overviewTitle": "A Scientific Approach to Land Restoration",
+  "overviewText": "RevivoEarth is not focused on product sales or ready-made prescriptions. Our goal is to introduce, examine, and promote science-based approaches to land degradation, dust pollution, soil erosion, shifting sands, and vegetation loss. Effective solutions must be selected according to climate, soil characteristics, local conditions, and environmental impact.",
   "solution1": {
-    "title": "Eco-Bio Mulch Technology",
-    "description": "Our eco-friendly bio-oil mulch is designed to reduce dust, retain soil moisture, and prevent erosion—while remaining fully biodegradable and safe for ecosystems."
+  "title": "Eco-Compatible Soil Covers and Mulches",
+  "description": "Exploring the role of surface covers, environmentally compatible mulches, and soil stabilization methods in reducing dust, preserving soil moisture, and supporting vulnerable landscapes."
   },
   "solution2": {
-    "title": "Integrated Erosion Control",
-    "description": "We provide integrated erosion control systems that combine engineering design with nature-based elements to stabilize soil and protect biodiversity."
+  "title": "Soil Erosion Control",
+  "description": "Introducing scientific and management-based approaches to reducing wind and water erosion, protecting soil, and strengthening land resilience in arid and semi-arid regions."
   },
   "solution3": {
-    "title": "Smart Dust Suppression",
-    "description": "Our low-impact, water-saving dust suppression solutions are ideal for dry zones, mining sites, and infrastructure development—supporting both health and compliance."
+  "title": "Dust Management",
+  "description": "Understanding dust sources and examining low-water, nature-oriented, and monitorable approaches to reduce impacts on human health, infrastructure, and ecosystems."
   },
   "solution4": {
-    "title": "Sustainable Land Recovery",
-    "description": "Through land rehabilitation strategies, we restore damaged landscapes into thriving ecosystems using native vegetation, organic additives, and responsible planning."
+  "title": "Vegetation and Ecosystem Recovery",
+  "description": "Promoting approaches such as native species selection, seed bank support, soil care, and long-term planning to gradually bring life back to damaged lands."
   },
-  "benefitsTitle": "Why Choose RevivoEarth",
+  "benefitsTitle": "The RevivoEarth Approach",
   "benefit1": {
-    "title": "Science-Backed Results",
-    "description": "All our solutions are validated through environmental research and performance in diverse climate conditions."
+  "title": "Grounded in Science and Data",
+  "description": "The solutions we introduce should be assessed through research, data, field experience, and real-world evaluation."
   },
   "benefit2": {
-    "title": "Sustainability at Core",
-    "description": "Our innovations are aligned with environmental ethics, ensuring minimal footprint and long-term harmony with nature."
+  "title": "Environmental Sustainability First",
+  "description": "Every solution should be examined in terms of environmental impact, climate compatibility, and long-term consequences."
   },
   "benefit3": {
-    "title": "Economically Viable",
-    "description": "We optimize cost-effectiveness by reducing long-term maintenance and improving project efficiency."
+  "title": "Practical and Participation-Oriented",
+  "description": "Land restoration cannot rely on technology alone; people, experts, organizations, and local communities are part of the solution."
   },
-  "caseStudiesTitle": "Field Success Stories",
+  "caseStudiesTitle": "Topics and Experiences to Explore",
   "showing": "Showing",
-  "of": "Of",
-  "caseStudies": "Case Studies",
+  "of": "of",
+  "caseStudies": "items",
+  
   "caseStudy1": {
-    "title": "Post-Mining Land Regeneration",
-    "description": "Rehabilitating a former mining site in a desert region through mulch application and erosion prevention techniques.",
-    "result1": "Dust reduction: over 90%",
-    "result2": "Recovered 150 hectares of land",
-    "result3": "Met sustainability regulations ahead of deadline"
+  "title": "Restoring Lands Affected by Industrial Activities",
+  "description": "Examining methods to restore soil stability, reduce dust generation, and create initial conditions for vegetation recovery in degraded lands.",
+  "result1": "Assessment of soil conditions and dust sources",
+  "result2": "Selection of methods based on climate and degradation level",
+  "result3": "Environmental monitoring and adaptive improvement"
   },
   "caseStudy2": {
-    "title": "Urban Infrastructure Dust Control",
-    "description": "Supplying a clean-air solution for a mega construction site in a dry climate with limited water resources.",
-    "result1": "Air quality maintained within legal limits",
-    "result2": "60% less water consumption than traditional spraying",
-    "result3": "Awarded for environmental responsibility"
+  "title": "Dust Reduction in Urban and Construction Projects",
+  "description": "Studying low-water and monitorable approaches for dust control in projects located in dry regions or unstable soils.",
+  "result1": "Identification of dust sources and emission patterns",
+  "result2": "Reduced reliance on water-intensive methods",
+  "result3": "Attention to air quality, soil condition, and environmental health"
   },
- "caseStudy3": {
-    "title": "Seed Balls for Combating Desertification",
-    "description": "Applying the Seed Balls technique as a low-cost and effective method to restore vegetation cover in arid and desert regions of Iran.",
-    "result1": "Reduced wind erosion and dust control",
-    "result2": "Enhanced natural vegetation cover and sand dune fixation",
-    "result3": "Community-driven implementation with lower costs"
+  "caseStudy3": {
+  "title": "Seed Balls and Vegetation Recovery",
+  "description": "Exploring seed balls as a simple, low-cost, and community-friendly method to support vegetation recovery in some dry and degraded areas.",
+  "result1": "Potential for community-based participation",
+  "result2": "Support for climate-adapted native species",
+  "result3": "Requires proper seed selection, timing, and monitoring"
   },
   "caseStudy4": {
-    "title": "Urban Infrastructure Dust Control",
-    "description": "Supplying a clean-air solution for a mega construction site in a dry climate with limited water resources.",
-    "result1": "Air quality maintained within legal limits",
-    "result2": "60% less water consumption than traditional spraying",
-    "result3": "Awarded for environmental responsibility"
+  "title": "Stabilizing Shifting Sands in Vulnerable Areas",
+  "description": "Examining a combination of physical, biological, and management-based methods to reduce sand movement and protect land, habitats, and infrastructure.",
+  "result1": "Understanding sand movement patterns and prevailing winds",
+  "result2": "Combining vegetation, soil surface management, and protective methods",
+  "result3": "Gradual monitoring to evaluate long-term stability"
   },
-  "readyToStart": "Ready to Restore Your Land and Impact?",
-  "ctaDescription": "Let’s discuss how RevivoEarth’s innovations can help you meet environmental goals with measurable results.",
-  "contactUs": "Talk to Our Specialists"
-}
+  "readyToStart": "Do You Have an Idea for Restoring Land?",
+  "ctaDescription": "If you work in environmental fields, research, education, media, or land restoration projects, you can contact RevivoEarth to collaborate, share an idea, or start a conversation.",
+  "contactUs": "Share an Idea or Collaborate"
+  }
+  

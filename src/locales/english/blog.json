@@ -1,55 +1,56 @@
 {
-    "title": "Environmental Insights & Innovation",
-    "subtitle": "Explore in-depth articles on sustainable solutions, environmental innovation, and ecosystem restoration.",
+    "title": "Environmental Insights and Articles",
+    "subtitle": "A collection of scientific and analytical articles on land restoration, desertification control, dust management, soil stability, and environmental innovation.",
     "allCategories": "All Categories",
+    
     "categories": {
-        "oilMulch": "Oil Mulch",
-        "environment": "Environmental Topics",
-        "innovation": "Eco-Innovation",
-        "sustainability": "Sustainability"
+    "oilMulch": "Oil Mulch",
+    "environment": "Environment",
+    "innovation": "Environmental Innovation",
+    "sustainability": "Sustainability",
+    "desertification": "Desertification",
+    "dustControl": "Dust Control"
     },
+    
     "read": "min read",
-    "readMore": "Read more",
-    "newsletterTitle": "Stay Informed. Stay Engaged.",
-    "newsletterSubtitle": "Subscribe to our newsletter for the latest updates on sustainable practices and environmental breakthroughs.",
-    "emailPlaceholder": "Enter your email address",
+    "readMore": "Read More",
+    "newsletterTitle": "Stay Updated with RevivoEarth",
+    "newsletterSubtitle": "Subscribe to receive scientific, educational, and analytical content on land restoration and environmental solutions.",
+    "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "showing": "Showing",
     "of": "of",
     "articles": "articles",
-
-
+    
     "articlesName": {
-        "article1":{
-            "title": "Oil-based Mulching in Iran (National Geographic, November 1979)" ,
-            "excerpt": "The November 1979 issue of National Geographic examines Iran’s innovative approach to combating desertification, using petroleum mulch to stabilize migrating sand dunes near Ahvaz. In this process, workers use tankers pulled by bulldozers to evenly spray residual oil over the sand surface. This creates a gray, adhesive layer that retains moisture, prevents sand movement, and supports the establishment and growth of vegetation. As part of broader desert control and land protection programs, this technique demonstrates the use of petroleum resources for environmental restoration, blending engineering ingenuity with ecological needs in arid regions.",
-            "date": "1979-11-01",
-            "categories": "Environmental Topics",
-            "readTime": "128"
-        },
-        "article2":{
-            "title": "Short-term effect of oil-mulch on vegetation dynamic" ,
-            "excerpt": "This study examines the short-term effects of oil-mulch on vegetation in arid southwestern Iran, combining ecological surveys with remote sensing. One year after application, vegetation cover, litter, and rangeland condition improved, while bare soil decreased. However, species diversity and evenness declined. Remote sensing (MSAVI) detected a 44.8% vegetation increase between 2017 and 2019. Using oil-mulch with native plantings and grazing control can support rangeland rehabilitation, but biodiversity impacts require monitoring.",
-            "date": "2019-01-01",
-            "categories": "Oil Mulch",
-            "readTime": "60"
-        },
-        "article3": {
-            "title": "Short-term effect of oil-mulch on vegetation dynamic",
-            "excerpt": "This study analyzes the short-term effects of oil-mulch on vegetation in arid southwestern Iran using ecological field data and remote sensing. One year after application, vegetation cover, litter, and rangeland condition improved while bare soil decreased. However, species diversity and evenness declined. MSAVI index from remote sensing showed a 44.8% increase in vegetation cover between 2017 and 2019. Combining oil-mulch with native plantings and grazing control supports rangeland rehabilitation, but biodiversity impacts must be monitored.",
-            "categories": "Oil Mulch",
-            "date": "2021-01-25",
-            "readTime": "35"
-        },
-        "article4": {
-            "title": "Sand Dunes Fixation In Baiji District Iraq ",
-            "excerpt": "This paper examines methods and technologies for stabilizing sand dunes in desert areas, focusing on petroleum and bio mulches, native vegetation planting, and windbreak construction. The author analyzes the impact of these measures on reducing wind erosion, improving vegetation cover, and protecting soil resources. Case studies from different countries demonstrate that combining mechanical and biological approaches yields the best results. The study highlights the importance of sustainable management and adapting techniques to the region’s climatic and economic conditions.",
-            "categories": "Desertification",
-            "date": "2002-01-01",
-            "readTime": "45"
-        }
-
-
+    "article1": {
+    "title": "Oil Mulching in Iran: A National Geographic Report on Stabilizing Shifting Sands",
+    "excerpt": "This article revisits National Geographic’s November 1979 report on the use of oil mulch to stabilize sand dunes near Ahvaz, Iran. The method aimed to reduce sand movement, preserve soil moisture, and create initial conditions for vegetation establishment.",
+    "date": "1979-11-01",
+    "categories": "Oil Mulch",
+    "readTime": "12"
+    },
+    "article2": {
+    "title": "Short-Term Effects of Oil Mulch on Vegetation Dynamics in Southwest Iran",
+    "excerpt": "This study examines the short-term effects of oil mulch on vegetation in arid areas of southwest Iran. The findings suggest that mulching may help increase vegetation cover and reduce bare soil, while its effects on species diversity require careful monitoring.",
+    "date": "2019-01-01",
+    "categories": "Oil Mulch",
+    "readTime": "8"
+    },
+    "article3": {
+    "title": "Modified Bentonite Mulch for Stabilizing Wind-Erodible Sands",
+    "excerpt": "This study explores the use of modified bentonite impregnated with petroleum-based materials as an approach to stabilizing sands vulnerable to wind erosion. The findings suggest potential applications in erosion control and reducing soil particle movement.",
+    "date": "2025-07-16",
+    "categories": "Environmental Innovation",
+    "readTime": "7"
+    },
+    "article4": {
+    "title": "Sand Dune Stabilization in the Baiji Region of Iraq",
+    "excerpt": "This article reviews different approaches to stabilizing sand dunes, including oil and biological mulches, native vegetation planting, and windbreaks. It emphasizes the importance of combining mechanical, biological, and management-based methods according to local climate conditions.",
+    "date": "2002-01-01",
+    "categories": "Desertification",
+    "readTime": "9"
+    }
+    }
     }
     
-}

@@ -1,39 +1,30 @@
 {
-  "heroTitle": "Reviving Earth, Restoring Hope",
-  "heroDescription": "Join our movement to combat environmental crises through awareness, science-based solutions, and collective action focused on restoring deserts and degraded lands.",
-
-  "learnMore": "Learn About Our Initiatives",
+  "heroTitle": "The Earth Still Has a Chance to Recover",
+  "heroDescription": "RevivoEarth was created to raise awareness, encourage participation, and promote science-based approaches to land and ecosystem restoration, with a focus on challenges such as dust storms, soil erosion, shifting sands, and ecosystem degradation.",
+  "learnMore": "Learn More",
   "getQuote": "Join the Movement",
-
   "aboutUs": "About RevivoEarth",
-  "aboutUsDescription": "RevivoEarth is a transformative movement committed to identifying, analyzing, and addressing solvable environmental challenges through scientific methods and practical ecosystem restoration strategies.",
+  "aboutUsDescription": "RevivoEarth is an awareness-driven and participation-oriented platform for environmental restoration. We aim to explain environmental challenges in a clear and responsible way while creating space for dialogue, collaboration, and meaningful action.",
   
-  "mainTitle": "Launching a Movement to Heal the Earth",
-  "mainDescription": "RevivoEarth is a knowledge-based, non-commercial initiative focused on restoring damaged ecosystems through public awareness, collective action, and science-driven solutions. We don’t sell—we strive to inspire, engage, and empower individuals to make a real impact on the planet’s future.",
+  "mainTitle": "Awareness, Science, and Participation for Land Restoration",
+  "mainDescription": "RevivoEarth is an environmental initiative focused on raising public awareness, strengthening social responsibility, and introducing science-based approaches to address land degradation and damaged ecosystems. Our focus is not product promotion or sales; our goal is to build understanding, encourage informed dialogue, support practical solutions, and invite people, experts, and organizations to take responsible action.",
   
   "ourVision": "Our Vision",
-  "ourVisionDescription": "To become a leading national and global force in rehabilitating damaged environments and ecosystems.",
-
+  "ourVisionDescription": "To grow into an impactful platform for awareness, social participation, and the promotion of science-based solutions for environmental restoration and the recovery of damaged ecosystems.",
   "ourMission": "Our Mission",
-  "ourMissionDescription": "To raise awareness, foster lasting environmental responsibility, and advocate for solutions to ecological crises — with a special focus on desert and land restoration through social responsibility.",
-
-  "ourValues": "Our Core Values",
-
-  "ourValuesInnovation": "Scientific Approach",
-  "ourValuesInnovationDescription": "Applying research-driven, scalable solutions to large-scale ecosystem restoration projects.",
-
+  "ourMissionDescription": "To raise awareness, strengthen critical thinking, and encourage responsible public demand for science-based responses to environmental crises, with a focus on transparency, participation, and social responsibility.",
+  "ourValues": "Core Values",
+  "ourValuesInnovation": "Science-Based Approach",
+  "ourValuesInnovationDescription": "Relying on knowledge, research, data, and field experience to introduce practical and credible approaches for restoring land and ecosystems.",
   "ourValuesSustainability": "Social Responsibility",
-  "ourValuesSustainabilityDescription": "Encouraging individuals, companies, and governments to take ownership of environmental stewardship.",
-
-  "ourValuesExcellence": "Collaborative Action",
-  "ourValuesExcellenceDescription": "Fostering partnerships between experts, activists, and communities to drive meaningful change.",
-
-  "ourValuesIntegrity": "Transparency",
-  "ourValuesIntegrityDescription": "Maintaining open and honest communication with stakeholders and the public.",
-
-  "contactUs": "Get Involved",
-  "contactUsDescription": "Join our growing network of environmental professionals, advocates, and concerned citizens working to revive fragile ecosystems.",
-
-  "makeChange": "Ready to Make a Change?",
-  "email": "ContactEmail@RevivoEarth.org"
-}
+  "ourValuesSustainabilityDescription": "Encouraging individuals, communities, organizations, and institutions to take responsibility for protecting the environment and reducing ecosystem damage.",
+  "ourValuesExcellence": "Collective Participation",
+  "ourValuesExcellenceDescription": "Creating space for collaboration among citizens, experts, environmental advocates, media, and responsible organizations.",
+  "ourValuesIntegrity": "Transparency and Integrity",
+  "ourValuesIntegrityDescription": "Avoiding exaggeration, communicating environmental issues responsibly, and providing clear, trustworthy, and reality-based content.",
+  "contactUs": "Work With Us",
+  "contactUsDescription": "If you are involved in environmental work, research, education, media, social responsibility, or land restoration projects, RevivoEarth can be a platform for collaboration and shared impact.",
+  "makeChange": "Ready to Take Part in Restoring the Earth?",
+  "email": "info@revivoearth.com"
+  }
+  

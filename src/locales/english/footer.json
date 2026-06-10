@@ -1,20 +1,21 @@
 {
   "contactUs": "Contact Us",
   "address": "Address",
-  "addressDetails": "Address",
+  "addressDetails": "Office or activity location",
   "phone": "Phone",
   "phoneDetails": "+98 9104516070",
   "email": "Email",
-  "emailDetails": "revivoearth@gmail.com",
+  "emailDetails": "info@revivoearth.com",
   "quickLinks": "Quick Links",
   "privacyPolicy": "Privacy Policy",
   "aboutUs": "About Us",
-  "solutions": "Our Solutions",
+  "solutions": "Solutions",
   "followUs": "Follow Us",
-  "companyDescription": "Leading sustainable environmental solutions for a greener future.",
-  "socialDescription": "Follow us for the latest updates on environmental solutions",
-  "sustainabilityMessage": "Committed to a sustainable future",
-  "rights": "© 2025 RevivoEarth. All rights reserved.",
+  "companyDescription": "RevivoEarth is a platform for awareness, participation, and the promotion of science-based approaches to land restoration and the protection of damaged ecosystems.",
+  "socialDescription": "Follow RevivoEarth for the latest environmental articles, stories, and awareness-driven content.",
+  "sustainabilityMessage": "For an Earth that still has a chance to recover",
+  "rights": "All rights reserved by RevivoEarth.",
   "designedBy": "Designed and developed by",
   "melinaName": "Melina Niavarani"
-}
+  }
+  

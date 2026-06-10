@@ -1,20 +1,21 @@
 {
   "contactUs": "تماس با ما",
   "address": "آدرس",
-  "addressDetails": "نشانی",
+  "addressDetails": "نشانی دفتر یا محل فعالیت",
   "phone": "تلفن",
   "phoneDetails": "09104516070",
   "email": "ایمیل",
-  "emailDetails": "revivoearth@gmail.com",
+  "emailDetails": "info@revivoearth.com",
   "quickLinks": "لینک‌های مفید",
   "privacyPolicy": "حفظ حریم خصوصی",
   "aboutUs": "درباره ما",
-  "solutions": "راه‌حل‌های ما",
+  "solutions": "راهکارها",
   "followUs": "ما را دنبال کنید",
-  "companyDescription": "پیشرو در ارائه راه‌حل‌های پایدار محیط زیستی برای آینده‌ای سبزتر.",
-  "socialDescription": "برای دریافت آخرین اخبار در مورد راه‌حل‌های محیط زیستی ما را دنبال کنید",
-  "sustainabilityMessage": "متعهد به آینده‌ای پایدار",
-  "rights": "کلیه حقوق این وبسایت متعلق به RevivoEarth است.",
+  "companyDescription": "RevivoEarth بستری برای آگاهی‌بخشی، مشارکت و ترویج راهکارهای علمی در مسیر احیای زمین و حفاظت از اکوسیستم‌های آسیب‌دیده است.",
+  "socialDescription": "برای دنبال‌کردن تازه‌ترین محتواها، مقالات و روایت‌های محیط‌زیستی RevivoEarth همراه ما باشید.",
+  "sustainabilityMessage": "برای زمینی که هنوز فرصت احیا دارد",
+  "rights": "کلیه حقوق این وب‌سایت متعلق به RevivoEarth است.",
   "designedBy": "طراحی و توسعه توسط",
   "melinaName": "ملینا نیاورانی"
-}
+  }
+  

@@ -1,20 +1,21 @@
 {
-  "contactUs": "اتصل بنا",
+  "contactUs": "تواصل معنا",
   "address": "العنوان",
-  "addressDetails": "العنوان",
+  "addressDetails": "عنوان المكتب أو موقع النشاط",
   "phone": "الهاتف",
-  "phoneDetails": "0098-9104516070",
+  "phoneDetails": "09104516070",
   "email": "البريد الإلكتروني",
-  "emailDetails": "revivoearth@gmail.com",
-  "quickLinks": "روابط سريعة",
+  "emailDetails": "info@revivoearth.com",
+  "quickLinks": "روابط مفيدة",
   "privacyPolicy": "سياسة الخصوصية",
   "aboutUs": "من نحن",
-  "solutions": "حلولنا",
+  "solutions": "الحلول",
   "followUs": "تابعنا",
-  "companyDescription": "الرائد في تقديم الحلول البيئية المستدامة لمستقبل أكثر خضرة.",
-  "socialDescription": "تابعنا للحصول على آخر التحديثات حول الحلول البيئية",
-  "sustainabilityMessage": "ملتزمون بمستقبل مستدام",
-  "rights": "جميع حقوق هذا الموقع تعود إلى RevivoEarth.",
-  "designedBy": "صمم وطور بواسطة",
+  "companyDescription": "RevivoEarth هي منصة للتوعية والمشاركة وتعزيز النهج العلمية في مسار استعادة الأرض وحماية الأنظمة البيئية المتضررة.",
+  "socialDescription": "تابع RevivoEarth للاطلاع على أحدث المقالات والقصص والمحتوى البيئي التوعوي.",
+  "sustainabilityMessage": "من أجل أرض ما زالت تملك فرصة للتعافي",
+  "rights": "جميع حقوق هذا الموقع محفوظة لـ RevivoEarth.",
+  "designedBy": "التصميم والتطوير بواسطة",
   "melinaName": "ميلينا نياوراني"
-}
+  }
+  

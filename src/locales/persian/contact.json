@@ -1,24 +1,24 @@
 {
-  "heroTitle": "با ما در تماس باشید",
-  "heroDescription": "ما دوست داریم از شما بشنویم. چه سوالی داشته باشید و چه بخواهید همکاری کنید، امروز با ما تماس بگیرید.",
+  "heroTitle": "با RevivoEarth در ارتباط باشید",
+  "heroDescription": "برای همکاری، ارسال ایده، مشارکت علمی یا رسانه‌ای و گفت‌وگو درباره احیای زمین و حفاظت از اکوسیستم‌ها با ما در تماس باشید.",
   "formTitle": "پیام خود را برای ما ارسال کنید",
   "fullName": "نام کامل",
-  "fullNamePlaceholder": "نام کامل خود را وارد کنید",
+  "fullNamePlaceholder": "نام و نام خانوادگی خود را وارد کنید",
   "emailAddress": "آدرس ایمیل",
   "emailPlaceholder": "آدرس ایمیل خود را وارد کنید",
   "yourMessage": "پیام شما",
-  "messagePlaceholder": "به ما بگویید چگونه می‌توانیم کمک کنیم",
+  "messagePlaceholder": "ایده، پیشنهاد همکاری یا پیام خود را بنویسید",
   "sendMessage": "ارسال پیام",
-  "successMessage": "متشکریم که با ما تماس گرفتید! به زودی با شما تماس خواهیم گرفت.",
+  "successMessage": "پیام شما با موفقیت ارسال شد. در صورت ارتباط با مسیر فعالیت RevivoEarth، از طریق ایمیل با شما در تماس خواهیم بود.",
   "contactInfo": "اطلاعات تماس",
-  "contactInfoDescription": "همچنین می‌توانید از طریق اطلاعات تماس زیر با ما در ارتباط باشید.",
+  "contactInfoDescription": "برای ارتباط با RevivoEarth می‌توانید از طریق ایمیل رسمی یا شبکه‌های اجتماعی با ما در تماس باشید.",
   "phone": "۰۹۱۰۴۵۱۶۰۷۰",
-  "email": "revivoearth@gmail.com",
-  "address": "تهران، خیابان طبیعت، پلاک ۱۲۳",
-  "letsWorkTogether": "بیایید با هم کار کنیم",
-  "collaborationDescription": "علاقه‌مند به همکاری یا یادگیری بیشتر هستید؟ امروز با ما تماس بگیرید!",
-  "emailUs": "ایمیل بزنید",
+  "email": "info@revivoearth.com",
+  "address": "نشانی دفتر یا محل فعالیت به‌زودی اعلام می‌شود.",
+  "letsWorkTogether": "بیایید برای احیای زمین همکاری کنیم",
+  "collaborationDescription": "اگر در حوزه محیط زیست، پژوهش، آموزش، رسانه، مسئولیت اجتماعی یا پروژه‌های احیای زمین فعالیت می‌کنید، RevivoEarth می‌تواند بستری برای همکاری و اثرگذاری مشترک باشد.",
+  "emailUs": "ارسال ایمیل",
   "instagram": "@revivoearth",
   "instagramUrl": "https://instagram.com/revivoearth"
-
-}
+  }
+  

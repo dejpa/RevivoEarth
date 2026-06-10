@@ -1,32 +1,30 @@
 {
   "aboutUs": "About Us",
-  "description": "RevivoEarth is an independent environmental movement focused on land restoration, desertification control, cleaner air, and reviving damaged ecosystems through awareness, collaboration, and public action.",
+  "description": "RevivoEarth is an awareness-driven and participation-oriented platform focused on environmental restoration, with attention to challenges such as dust storms, soil erosion, shifting sands, desertification, and ecosystem degradation.",
   
-
   "whoWeAreTitle": "Who We Are",
-  "whoWeAreText": "We are an independent environmental movement committed to awareness, inspiration, and advocacy in response to ecological crises. At RevivoEarth, we believe sustainable change begins with knowledge, community, and bold yet practical solutions. We are not affiliated with any political or commercial entity and act solely out of a collective sense of responsibility to the Earth.",
-
-  "historyTitle": "Our Story",
-  "historyText": "RevivoEarth began as a grassroots initiative by a group of environmentally conscious individuals who believed awareness must lead to action. What started as educational content about desertification and dust pollution has grown into a strategic and people-powered movement. Our journey has been marked by innovation, transparency, and a deep belief in bottom-up change.",
-
-  "missionValuesTitle": "Our Mission & Values",
-  "missionText": "Our mission is to foster environmental responsibility through education, digital activism, and strategic advocacy — with a focus on land restoration, combating desertification, and strengthening social responsibility, without any involvement in product sales or political affiliations.",
-
-  "valuesList": {
-    "socialResponsibility": "Social Responsibility: Change begins with us, as individuals, communities, and institutions.",
-    "scienceBased": "Science-Based: Our solutions are grounded in research, scalable models, and real-world experience.",
-    "transparency": "Transparency & Integrity: We communicate with honesty and clarity.",
-    "innovation": "Innovation: We welcome new ideas and approaches to ecosystem restoration.",
-    "collaboration": "Collaboration: We work alongside academics, experts, organizations, and communities to achieve shared goals."
-  },
-
-    "ourTeam": " Our Team",
-    "ourTeamDescription": "RevivoEarth is powered by a diverse team of experts, innovators, and environmental advocates committed to restoring ecosystems and driving meaningful change across the globe.",
-    "manager": "name 1",
-    "managerDescription": "Chief Operation Officer",
-    "development": "name 2",
-    "developmentDescription": "Head of Reasearch & Development",
-    "ceo": "name 3",
-    "ceoDescription": "CEO & Founder"   
+  "whoWeAreText": "RevivoEarth was created to raise public awareness, strengthen social responsibility, and promote science-based approaches to environmental challenges. We aim to explain issues such as land degradation, dust pollution, soil erosion, and vegetation loss in a clear and accessible way, while creating space for dialogue, collaboration, and responsible action. Our focus is not product sales; our focus is awareness, participation, and the promotion of credible approaches to land and ecosystem restoration.",
   
-}
+  "historyTitle": "Our Story",
+  "historyText": "RevivoEarth began with a simple but serious concern: environmental crises cannot lead to meaningful action unless they are first seen, understood, and discussed responsibly. The initiative started with educational content and storytelling around desertification, dust pollution, and land restoration, and has gradually grown into a platform for awareness, science-based dialogue, and public participation. RevivoEarth is still evolving, but its path is guided by transparency, scientific thinking, and social responsibility.",
+  
+  "missionValuesTitle": "Our Mission & Values",
+  "missionText": "RevivoEarth’s mission is to raise awareness, strengthen critical thinking, and encourage responsible public demand for science-based responses to environmental crises. With a focus on land restoration, desertification control, dust impact reduction, and ecosystem protection, we work to connect scientific knowledge, field experience, and public participation.",
+  "valuesList": {
+  "socialResponsibility": "Social Responsibility: Protecting and restoring the environment is a shared responsibility that begins with individuals, communities, organizations, and institutions.",
+  "scienceBased": "Science-Based Approach: Our content is shaped by knowledge, research, data, field experience, and practical solutions that can be examined and discussed.",
+  "transparency": "Transparency and Integrity: We avoid exaggeration, unsupported promises, and superficial narratives, and communicate environmental issues responsibly.",
+  "innovation": "Innovation: Restoring land requires new ideas, modern technologies, practical experience, and creative thinking.",
+  "collaboration": "Collaboration: RevivoEarth creates space for cooperation among citizens, experts, researchers, environmental advocates, media, and responsible organizations."
+  },
+  
+  "ourTeam": "Our Team",
+  "ourTeamDescription": "RevivoEarth is driven by people working across environmental awareness, content, research, media, and digital development, united by a shared goal: raising awareness, strengthening participation, and supporting the path toward land and ecosystem restoration.",
+  "manager": "Name 1",
+  "managerDescription": "Operations Manager",
+  "development": "Name 2",
+  "developmentDescription": "Research and Development Manager",
+  "ceo": "Name 3",
+  "ceoDescription": "CEO & Founder"
+  }
+  
