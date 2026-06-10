@@ -156,13 +156,13 @@ export default function Header() {
               </div>
             </div>
             
-            {/* iOS-style CTA Button */}
+            {/* iOS-style CTA Button
             <Link 
               href={`/${currentLocale}/contact`}
               className="bg-black text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-800 active:bg-gray-900 transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
             >
               {t("header.getStarted") || "Get Started"}
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button - iOS Style */}
