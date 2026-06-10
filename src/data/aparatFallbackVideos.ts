@@ -2,6 +2,14 @@ import type { AparatVideo } from "@/lib/aparat";
 
 export const aparatFallbackVideos: AparatVideo[] = [
   {
+    uid:"lhu3cba",
+    "title":"دیداری ارزشمند در قلب طبیعت شمال ایران",
+    description:"",
+    thumbnail:"https://static.cdn.asset.aparat.com/avt/71432842-1939__1048.jpg",
+    uploadDate:"2026-06-10 11:00:08",
+    embedUrl:"https://www.aparat.com/video/video/embed/videohash/lhu3cba/vt/frame"
+  },
+  {
     uid: "qcp7ngl",
     title: "آینده فرزندان ما از همین‌جا شروع می‌شود",
     description: "",
