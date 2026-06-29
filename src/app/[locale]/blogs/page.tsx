@@ -65,7 +65,17 @@ export default function Articles() {
       image: "/articles/SandDunesFixation_Fadhil2002.webp",
       pdfUrl: "/articles/SandDunesFixation_Fadhil2002.pdf"
     },
-
+    {
+      id: 5,
+      title: t("articles.articlesName.article5.title"),
+      excerpt: t("articles.articlesName.article5.excerpt"),
+      date: t("articles.articlesName.article5.date"),
+      category: t("articles.articlesName.article5.categories"),
+      categoryKey: "oilMulch",
+      readTime: t("articles.articlesName.article5.readTime"),
+      image: "/articles/PetroleumMulching_WaterQuality_Zare2022.webp",
+      pdfUrl: "/articles/PetroleumMulching_WaterQuality_Zare2022.pdf"
+    },
   ];
 
   // Filter articles based on selected category

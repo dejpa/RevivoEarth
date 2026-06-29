@@ -50,7 +50,12 @@
     "date": "2002-01-01",
     "categories": "Oil Mulch",
     "readTime": "9"
-    }
+    },
+    "article5": { 
+        "title": "Investigation of the Effect of Mulching with Petroleum Products on Water Quality", "excerpt": "This article investigates the effects of petroleum mulch on water quality, with particular attention to heavy elements and polycyclic aromatic hydrocarbons. Short-, medium-, and long-term petroleum mulch samples from the Hamidiyeh sand dunes in Khuzestan Province, together with a sample from the Abadan Refinery, were examined under laboratory conditions. The results indicated that petroleum mulch did not significantly increase heavy-element contamination in water, while the concentrations of all investigated hydrocarbons remained below the permitted limits.",
+        "date": "2026-06-29", 
+        "categories": "Petroleum Mulch",
+        "readTime": "10" }
     }
     }
     
